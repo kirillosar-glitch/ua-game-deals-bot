@@ -56,7 +56,7 @@ def get_steam_deals():
 def get_ps_deals():
     try:
         # Запускаємо Apify актор
-        run_url = "https://api.apify.com/v2/acts/epctex~playstation-store-scraper/runs"
+        run_url = "https://api.apify.com/v2/acts/apify~playstation-store-scraper/runs"
         headers = {"Authorization": f"Bearer {APIFY_TOKEN}"}
         payload = {
             "countryCode": "UA",
@@ -75,7 +75,7 @@ def get_ps_deals():
         for i in range(12):
             time.sleep(5)
             status_r = requests.get(
-                f"https://api.apify.com/v2/acts/epctex~playstation-store-scraper/runs/{run_id}",
+                f"https://api.apify.com/v2/acts/apify~playstation-store-scraper/runs/{run_id}",
                 headers=headers
             )
             status = status_r.json().get("data", {}).get("status")
