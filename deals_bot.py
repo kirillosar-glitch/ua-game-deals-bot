@@ -53,37 +53,29 @@ def get_steam_deals():
 
 def get_ps_deals():
     try:
-        url = "https://psprices.com/region-ua/deals/?platform=ps4,ps5&sort=discount&display=grid"
-        headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-            "Accept": "application/json"
-        }
-        r = requests.get(
-            "https://psprices.com/api/games/search/?region=ua&sort=-discount_percent&has_discount=true&limit=5",
-            headers=headers,
-            timeout=10
-        )
-        print(f"PSPrices status: {r.status_code}")
-        print(f"PSPrices response: {r.text[:1000]}")
+        url = "https://store.playstation.com/store/api/chihiro/00_09_000/tumbler/UA/uk/999/STORE-MSF75508-PRICEDROPSCHI/1/24/az/0/PRICE/fl=withRatings/start=0/grid=true"
+        headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
+        r = requests.get(url, headers=headers, timeout=15)
+        print(f"PSN status: {r.status_code}")
+        print(f"PSN response: {r.text[:1000]}")
         data = r.json()
-        items = data.get("results", [])
+        items = data.get("links", [])[:5]
         if not items:
             return "🎮 <b>PS Store — знижки та роздачі</b>\n\nНа жаль, зараз немає актуальних пропозицій."
         lines = ["🎮 <b>PS Store — знижки та роздачі (UA)</b>\n"]
         for item in items:
             title = item.get("name", "Невідома гра")
-            cut = item.get("discount_percent", 0)
-            price = item.get("price", "0")
-            regular = item.get("price_base", "0")
-            slug = item.get("slug", "")
-            store_url = f"https://psprices.com/region-ua/game/{slug}/"
-            if int(cut) == 100 or str(price) == "0":
+            rewards = item.get("default_sku", {}).get("rewards", [{}])
+            cut = rewards[0].get("discount", 0) if rewards else 0
+            price = item.get("default_sku", {}).get("display_price", "0")
+            url_item = "https://store.playstation.com/uk-ua/product/" + item.get("id", "")
+            if cut == 100:
                 price_str = "🆓 Безкоштовно"
             else:
-                price_str = f"💰 {price} (було {regular})"
+                price_str = f"💰 {price}"
             lines.append(f"<b>{title}</b>")
             lines.append(f"🔥 -{cut}% | {price_str}")
-            lines.append(f"🔗 <a href='{store_url}'>Отримати в PS Store</a>\n")
+            lines.append(f"🔗 <a href='{url_item}'>Отримати в PS Store</a>\n")
         return "\n".join(lines)
     except Exception as e:
         return f"PS Store: помилка ({e})"
