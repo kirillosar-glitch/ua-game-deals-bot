@@ -53,30 +53,21 @@ def get_steam_deals():
 
 def get_ps_deals():
     try:
-        url = "https://store.playstation.com/store/api/chihiro/00_09_000/tumbler/UA/uk/999/STORE-MSF75508-PRICEDROPSCHI/1/24/az/0/PRICE/fl=withRatings/start=0/grid=true"
-        headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
-        r = requests.get(url, headers=headers, timeout=15)
+        url = "https://web.np.playstation.com/api/graphql/v1/op"
+        params = {
+            "operationName": "categoryGridRetrieve",
+            "variables": '{"id":"STORE-MSF75508-PRICEDROPSCHI","pageArgs":{"size":5,"offset":0},"sortBy":{"name":"DISCOUNT","isAscending":false},"filterBy":[],"facetOptions":[],"country":"UA","language":"uk"}',
+            "extensions": '{"persistedQuery":{"version":1,"sha256Hash":"4ce7d410a4db2c8b635a48c1dcdc30c2b0b4a4a3e8e5e5e5e5e5e5e5e5e5e5e5"}}'
+        }
+        headers = {
+            "User-Agent": "Mozilla/5.0",
+            "Accept": "application/json",
+            "x-psn-store-locale-override": "uk-UA"
+        }
+        r = requests.get(url, params=params, headers=headers, timeout=15)
         print(f"PSN status: {r.status_code}")
         print(f"PSN response: {r.text[:1000]}")
-        data = r.json()
-        items = data.get("links", [])[:5]
-        if not items:
-            return "🎮 <b>PS Store — знижки та роздачі</b>\n\nНа жаль, зараз немає актуальних пропозицій."
-        lines = ["🎮 <b>PS Store — знижки та роздачі (UA)</b>\n"]
-        for item in items:
-            title = item.get("name", "Невідома гра")
-            rewards = item.get("default_sku", {}).get("rewards", [{}])
-            cut = rewards[0].get("discount", 0) if rewards else 0
-            price = item.get("default_sku", {}).get("display_price", "0")
-            url_item = "https://store.playstation.com/uk-ua/product/" + item.get("id", "")
-            if cut == 100:
-                price_str = "🆓 Безкоштовно"
-            else:
-                price_str = f"💰 {price}"
-            lines.append(f"<b>{title}</b>")
-            lines.append(f"🔥 -{cut}% | {price_str}")
-            lines.append(f"🔗 <a href='{url_item}'>Отримати в PS Store</a>\n")
-        return "\n".join(lines)
+        return "PS Store: тест"
     except Exception as e:
         return f"PS Store: помилка ({e})"
 
