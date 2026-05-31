@@ -1,10 +1,15 @@
 import requests
 import os
+import json
+import base64
+from datetime import datetime, timedelta
 
 TELEGRAM_TOKEN = os.environ["TELEGRAM_TOKEN"]
 TELEGRAM_CHANNEL = "@ua_game_deals"
 ITAD_API_KEY = os.environ["ITAD_API_KEY"]
-APIFY_TOKEN = os.environ["APIFY_TOKEN"]
+GH_TOKEN = os.environ["GH_TOKEN"]
+GH_REPO = "kirillosar-glitch/ua-game-deals-bot"
+HISTORY_FILE = "published.json"
 
 def send_telegram(text):
     url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
@@ -17,106 +22,138 @@ def send_telegram(text):
     r = requests.post(url, data=data)
     print(r.status_code, r.text[:200])
 
-def get_steam_deals():
+def load_history():
+    url = f"https://api.github.com/repos/{GH_REPO}/contents/{HISTORY_FILE}"
+    headers = {"Authorization": f"token {GH_TOKEN}"}
+    r = requests.get(url, headers=headers)
+    if r.status_code == 200:
+        content = base64.b64decode(r.json()["content"]).decode("utf-8")
+        data = json.loads(content)
+        data["_sha"] = r.json()["sha"]
+        return data
+    return {"published": [], "_sha": None}
+
+def save_history(history):
+    sha = history.pop("_sha", None)
+    content = base64.b64encode(json.dumps(history, ensure_ascii=False, indent=2).encode()).decode()
+    url = f"https://api.github.com/repos/{GH_REPO}/contents/{HISTORY_FILE}"
+    headers = {"Authorization": f"token {GH_TOKEN}"}
+    payload = {
+        "message": "Update published history",
+        "content": content
+    }
+    if sha:
+        payload["sha"] = sha
+    requests.put(url, headers=headers, json=payload)
+
+def get_steam_deals(exclude_ids, min_cut=50, limit=20):
     url = "https://api.isthereanydeal.com/deals/v2"
     params = {
         "key": ITAD_API_KEY,
         "country": "UA",
         "shops": "61",
-        "limit": 5,
+        "limit": limit,
         "sort": "-cut"
     }
     try:
         r = requests.get(url, params=params)
         data = r.json()
         items = data.get("list", [])
-        if not items:
-            return "🎮 <b>Steam — знижки та роздачі</b>\n\nНа жаль, зараз немає актуальних пропозицій."
-        lines = ["🎮 <b>Steam — знижки та роздачі (UA)</b>\n"]
+
+        # Фільтруємо по порогу та виключаємо вже опубліковані
+        filtered = []
         for item in items:
-            title = item.get("title", "Невідома гра")
             deal = item.get("deal", {})
             cut = deal.get("cut", 0)
-            price = deal.get("price", {}).get("amount", 0)
-            currency = deal.get("price", {}).get("currency", "")
-            regular = deal.get("regular", {}).get("amount", 0)
-            store_url = deal.get("url", "")
-            if cut == 100 or price == 0:
-                price_str = "🆓 Безкоштовно"
-            else:
-                price_str = f"💰 {price:.0f} {currency} (було {regular:.0f} {currency})"
-            lines.append(f"<b>{title}</b>")
-            lines.append(f"🔥 -{cut}% | {price_str}")
-            lines.append(f"🔗 <a href='{store_url}'>Отримати в Steam</a>\n")
-        return "\n".join(lines)
+            slug = item.get("slug", "")
+            if cut >= min_cut and slug not in exclude_ids:
+                filtered.append(item)
+
+        # Якщо менше 5 — знижуємо поріг
+        if len(filtered) < 5 and min_cut > 20:
+            return get_steam_deals(exclude_ids, min_cut=min_cut-10, limit=limit)
+
+        return filtered[:5]
     except Exception as e:
-        return f"Steam: помилка ({e})"
+        print(f"Steam error: {e}")
+        return []
 
-def get_ps_deals():
-    try:
-        url = "https://web.np.playstation.com/api/graphql/v1/op"
-        headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-            "Accept": "application/json",
-            "Content-Type": "application/json",
-            "Origin": "https://store.playstation.com",
-            "Referer": "https://store.playstation.com/",
-            "x-psn-store-locale-override": "ru-UA",
-            "x-apollo-operation-name": "categoryGridRetrieve",
-            "apollo-require-preflight": "true"
-        }
-        params = {
-            "operationName": "categoryGridRetrieve",
-            "variables": '{"id":"3f772501-f6f8-49b7-abac-874a88ca4897","pageArgs":{"size":5,"offset":0},"sortBy":null,"filterBy":[],"facetOptions":[]}',
-            "extensions": '{"persistedQuery":{"version":1,"sha256Hash":"4e41660b6732f35c99fc5541926b7502a09557924e8c2cfebd1beb1a5c8c8f81"}}'
-        }
-        r = requests.get(url, headers=headers, params=params, timeout=15)
-        data = r.json()
-        grid = data.get("data", {}).get("categoryGridRetrieve", {})
-        products = grid.get("products") or []
-        print(f"First product keys: {list(products[0].keys()) if products else 'none'}")
-        print(f"First product full: {str(products[0])[:1000] if products else 'none'}")
-
-        if not products:
-            return "🎮 <b>PS Store — знижки та роздачі</b>\n\nНа жаль, зараз немає актуальних пропозицій."
-
-        lines = ["🎮 <b>PS Store — знижки та роздачі (UA)</b>\n"]
-        for item in products[:5]:
-            if not isinstance(item, dict):
-                continue
-            title = item.get("localizedStoreDisplayClassification") or item.get("name", "Невідома гра")
-            product_id = item.get("id", "")
-
-            # Шукаємо ціну в різних місцях
-            price_obj = item.get("price", {}) or {}
-            webcatalog = item.get("webcatalogProduct", {}) or {}
-            price_info = webcatalog.get("defaultProduct", {}) or {}
-
-            cut = price_obj.get("discountedPrice", {}).get("discountPercentage") or \
-                  price_info.get("price", {}).get("discountedPrice", {}).get("discountPercentage", 0)
-            price = price_obj.get("discountedPrice", {}).get("price") or \
-                    price_info.get("price", {}).get("discountedPrice", {}).get("price", "0")
-            regular = price_obj.get("basePrice") or \
-                      price_info.get("price", {}).get("basePrice", "0")
-
-            store_url = f"https://store.playstation.com/ru-ua/product/{product_id}"
-
-            if str(cut) == "100" or str(price) in ["0", "0.00", "None"]:
-                price_str = "🆓 Безкоштовно"
-            else:
-                price_str = f"💰 {price} (було {regular})"
-
-            lines.append(f"<b>{title}</b>")
-            lines.append(f"🔥 -{cut}% | {price_str}")
-            lines.append(f"🔗 <a href='{store_url}'>Отримати в PS Store</a>\n")
-
-        return "\n".join(lines)
-    except Exception as e:
-        return f"PS Store: помилка ({e})"
+def format_steam_post(items):
+    if not items:
+        return "🎮 <b>Steam — знижки та роздачі (UA)</b>\n\nНа жаль, зараз немає актуальних пропозицій."
+    lines = ["🎮 <b>Steam — знижки та роздачі (UA)</b>\n"]
+    for item in items:
+        title = item.get("title", "Невідома гра")
+        deal = item.get("deal", {})
+        cut = deal.get("cut", 0)
+        price = deal.get("price", {}).get("amount", 0)
+        currency = deal.get("price", {}).get("currency", "")
+        regular = deal.get("regular", {}).get("amount", 0)
+        store_url = deal.get("url", "")
+        if cut == 100 or price == 0:
+            price_str = "🆓 Безкоштовно"
+        else:
+            price_str = f"💰 {price:.0f} {currency} (було {regular:.0f} {currency})"
+        lines.append(f"<b>{title}</b>")
+        lines.append(f"🔥 -{cut}% | {price_str}")
+        lines.append(f"🔗 <a href='{store_url}'>Отримати в Steam</a>\n")
+    return "\n".join(lines)
 
 if __name__ == "__main__":
-    print("Steam...")
-    send_telegram(get_steam_deals())
-    print("PS Store...")
-    send_telegram(get_ps_deals())
+    # Завантажуємо історію
+    history = load_history()
+    published = history.get("published", [])
+
+    # Визначаємо що виключити
+    # Сьогодні і вчора — повний виняток
+    today = datetime.utcnow().strftime("%Y-%m-%d")
+    yesterday = (datetime.utcnow() - timedelta(days=1)).strftime("%Y-%m-%d")
+
+    exclude_today = set()
+    exclude_yesterday = set()
+    week_slugs = {}
+
+    for entry in published:
+        if entry["date"] == today:
+            exclude_today.add(entry["slug"])
+        if entry["date"] == yesterday:
+            exclude_yesterday.add(entry["slug"])
+        # Рахуємо частоту за тиждень
+        entry_date = datetime.strptime(entry["date"], "%Y-%m-%d")
+        if (datetime.utcnow() - entry_date).days <= 7:
+            week_slugs[entry["slug"]] = week_slugs.get(entry["slug"], 0) + 1
+
+    # Виключаємо: сьогоднішні + вчорашні
+    exclude_ids = exclude_today | exclude_yesterday
+
+    # Серед тижневих — намагаємось виключити ті що вже були більше 1 разу
+    frequent = {s for s, c in week_slugs.items() if c >= 2}
+    exclude_with_frequent = exclude_ids | frequent
+
+    print(f"Excluded today: {len(exclude_today)}, yesterday: {len(exclude_yesterday)}, frequent: {len(frequent)}")
+
+    # Отримуємо deals
+    items = get_steam_deals(exclude_with_frequent)
+    # Якщо після виключення частих мало — пробуємо без них
+    if len(items) < 5:
+        items = get_steam_deals(exclude_ids)
+
+    # Публікуємо
+    post = format_steam_post(items)
+    send_telegram(post)
+
+    # Зберігаємо в історію
+    for item in items:
+        slug = item.get("slug", "")
+        if slug:
+            published.append({"slug": slug, "date": today})
+
+    # Чистимо старі записи (старше 14 днів)
+    cutoff = (datetime.utcnow() - timedelta(days=14)).strftime("%Y-%m-%d")
+    published = [e for e in published if e["date"] >= cutoff]
+
+    history["published"] = published
+    history["_sha"] = load_history().get("_sha")
+    save_history(history)
+
     print("Готово!")
