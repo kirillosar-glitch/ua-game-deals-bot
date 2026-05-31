@@ -72,21 +72,28 @@ def get_ps_deals():
         }
         r = requests.get(url, headers=headers, params=params, timeout=15)
         print(f"PSN status: {r.status_code}")
-        print(f"PSN response: {r.text[:2000]}")
-
-        if r.status_code != 200:
-            return "PS Store: помилка запиту"
 
         data = r.json()
-        products = data.get("data", {}).get("categoryGridRetrieve", {}).get("products", [])
+        grid = data.get("data", {}).get("categoryGridRetrieve", {})
+        print(f"Grid keys: {list(grid.keys()) if isinstance(grid, dict) else grid}")
+
+        # Пробуємо різні поля
+        products = grid.get("products") or grid.get("concepts") or []
+        print(f"Products count: {len(products)}")
+        if products:
+            print(f"First product: {str(products[0])[:500]}")
 
         if not products:
             return "🎮 <b>PS Store — знижки та роздачі</b>\n\nНа жаль, зараз немає актуальних пропозицій."
 
         lines = ["🎮 <b>PS Store — знижки та роздачі (UA)</b>\n"]
         for item in products[:5]:
+            if not isinstance(item, dict):
+                continue
             title = item.get("name", "Невідома гра")
             price_obj = item.get("price", {})
+            if not isinstance(price_obj, dict):
+                price_obj = {}
             cut = price_obj.get("discountedPrice", {}).get("discountPercentage", 0)
             price = price_obj.get("discountedPrice", {}).get("price", "0")
             regular = price_obj.get("basePrice", "0")
