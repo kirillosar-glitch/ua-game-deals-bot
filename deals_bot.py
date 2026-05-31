@@ -58,9 +58,12 @@ def get_ps_deals():
         headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
             "Accept": "application/json",
+            "Content-Type": "application/json",
             "Origin": "https://store.playstation.com",
             "Referer": "https://store.playstation.com/",
-            "x-psn-store-locale-override": "ru-UA"
+            "x-psn-store-locale-override": "ru-UA",
+            "x-apollo-operation-name": "categoryGridRetrieve",
+            "apollo-require-preflight": "true"
         }
         params = {
             "operationName": "categoryGridRetrieve",
