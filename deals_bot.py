@@ -55,61 +55,17 @@ def get_steam_deals():
 
 def get_ps_deals():
     try:
-        # Запускаємо Apify актор
-        run_url = "https://api.apify.com/v2/acts/apify~playstation-store-scraper/runs"
-        headers = {"Authorization": f"Bearer {APIFY_TOKEN}"}
-        payload = {
-            "countryCode": "UA",
-            "includeDiscounts": True,
-            "sortBy": "discount",
-            "maxItems": 5,
-            "categoryUrl": "https://store.playstation.com/uk-ua/category/deals"
+        url = "https://store.playstation.com/ru-ua/pages/deals"
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "Accept-Language": "uk-UA,uk;q=0.9",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
         }
-        r = requests.post(run_url, json=payload, headers=headers)
-        print(f"Apify start: {r.status_code} {r.text[:300]}")
-        run_id = r.json().get("data", {}).get("id")
-        if not run_id:
-            return "PS Store: не вдалось запустити скрапер"
-
-        # Чекаємо завершення (до 60 секунд)
-        for i in range(12):
-            time.sleep(5)
-            status_r = requests.get(
-                f"https://api.apify.com/v2/acts/apify~playstation-store-scraper/runs/{run_id}",
-                headers=headers
-            )
-            status = status_r.json().get("data", {}).get("status")
-            print(f"Apify status: {status}")
-            if status == "SUCCEEDED":
-                break
-
-        # Отримуємо результати
-        dataset_id = status_r.json().get("data", {}).get("defaultDatasetId")
-        items_r = requests.get(
-            f"https://api.apify.com/v2/datasets/{dataset_id}/items?limit=5",
-            headers=headers
-        )
-        print(f"Apify items: {items_r.text[:500]}")
-        items = items_r.json()
-
-        if not items:
-            return "🎮 <b>PS Store — знижки та роздачі</b>\n\nНа жаль, зараз немає актуальних пропозицій."
-
-        lines = ["🎮 <b>PS Store — знижки та роздачі (UA)</b>\n"]
-        for item in items:
-            title = item.get("name", item.get("title", "Невідома гра"))
-            cut = item.get("discountPercentage", item.get("discount", 0))
-            price = item.get("price", "0")
-            regular = item.get("originalPrice", item.get("basePrice", "0"))
-            store_url = item.get("url", "")
-            if str(cut) == "100" or str(price) in ["0", "0.00", "Free"]:
-                price_str = "🆓 Безкоштовно"
-            else:
-                price_str = f"💰 {price} (було {regular})"
-            lines.append(f"<b>{title}</b>")
-            lines.append(f"🔥 -{cut}% | {price_str}")
-            lines.append(f"🔗 <a href='{store_url}'>Отримати в PS Store</a>\n")
-        return "\n".join(lines)
+        r = requests.get(url, headers=headers, timeout=15)
+        print(f"PSN status: {r.status_code}")
+        print(f"PSN response length: {len(r.text)}")
+        print(f"PSN response preview: {r.text[:2000]}")
+        return "PS Store: тест"
     except Exception as e:
         return f"PS Store: помилка ({e})"
 
