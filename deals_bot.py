@@ -76,5 +76,5 @@ if __name__ == "__main__":
     print("Steam...")
     send_telegram(get_deals([61], "Steam", "Отримати в Steam"))
     print("PS Store...")
-    send_telegram(get_deals([36], "PS Store", "Отримати в PS Store"))
+    send_telegram(get_deals([35], "PS Store", "Отримати в PS Store"))
     print("Готово!")
