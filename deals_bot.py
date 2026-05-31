@@ -1,6 +1,5 @@
 import requests
 import os
-import re
 
 TELEGRAM_TOKEN = os.environ["TELEGRAM_TOKEN"]
 TELEGRAM_CHANNEL = "@ua_game_deals"
@@ -53,44 +52,20 @@ def get_steam_deals():
     except Exception as e:
         return f"Steam: помилка ({e})"
 
-def get_psn_hash():
-    try:
-        html_r = requests.get(
-            "https://store.playstation.com/ru-ua/pages/deals",
-            headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"},
-            timeout=15
-        )
-        js_files = re.findall(r'src="(https://static\.playstation\.com[^"]+\.js)"', html_r.text)
-        for js_url in js_files:
-            js_r = requests.get(js_url, timeout=15)
-            hashes = re.findall(r'sha256Hash:"([a-f0-9]{64})"', js_r.text)
-            if hashes:
-                print(f"Found hashes in {js_url}: {hashes[:3]}")
-                return hashes[0]
-        return None
-    except Exception as e:
-        print(f"Hash error: {e}")
-        return None
-
 def get_ps_deals():
     try:
-        print("Getting PSN hash...")
-        hash_val = get_psn_hash()
-        print(f"Hash: {hash_val}")
-        if not hash_val:
-            return "PS Store: не вдалось знайти hash"
-
         url = "https://web.np.playstation.com/api/graphql/v1/op"
         headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
             "Accept": "application/json",
             "Origin": "https://store.playstation.com",
             "Referer": "https://store.playstation.com/",
+            "x-psn-store-locale-override": "ru-UA"
         }
         params = {
             "operationName": "categoryGridRetrieve",
-            "variables": '{"id":"STORE-MSF75508-PRICEDROPSCHI","pageArgs":{"size":5,"offset":0},"sortBy":{"name":"DISCOUNT_PERCENTAGE","isAscending":false},"filterBy":[],"facetOptions":[],"country":"UA","language":"ru"}',
-            "extensions": f'{{"persistedQuery":{{"version":1,"sha256Hash":"{hash_val}"}}}}'
+            "variables": '{"id":"3f772501-f6f8-49b7-abac-874a88ca4897","pageArgs":{"size":5,"offset":0},"sortBy":null,"filterBy":[],"facetOptions":[]}',
+            "extensions": '{"persistedQuery":{"version":1,"sha256Hash":"4e41660b6732f35c99fc5541926b7502a09557924e8c2cfebd1beb1a5c8c8f81"}}'
         }
         r = requests.get(url, headers=headers, params=params, timeout=15)
         print(f"PSN status: {r.status_code}")
