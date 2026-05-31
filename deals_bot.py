@@ -75,7 +75,7 @@ if __name__ == "__main__":
     print("Steam...")
     send_telegram(get_deals([61], "Steam", "Отримати в Steam"))
     print("PS Store...")
-    r_shops = requests.get(f"https://api.isthereanydeal.com/shops/v1?key={ITAD_API_KEY}")
+    r_shops = requests.get(f"https://api.isthereanydeal.com/shops/v2?key={ITAD_API_KEY}")
     print("SHOPS:", r_shops.text[:3000])
     send_telegram(get_deals([35], "PS Store", "Отримати в PS Store"))
     print("Готово!")
