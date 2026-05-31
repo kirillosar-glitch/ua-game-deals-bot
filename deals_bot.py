@@ -71,17 +71,11 @@ def get_ps_deals():
             "extensions": '{"persistedQuery":{"version":1,"sha256Hash":"4e41660b6732f35c99fc5541926b7502a09557924e8c2cfebd1beb1a5c8c8f81"}}'
         }
         r = requests.get(url, headers=headers, params=params, timeout=15)
-        print(f"PSN status: {r.status_code}")
-
         data = r.json()
         grid = data.get("data", {}).get("categoryGridRetrieve", {})
-        print(f"Grid keys: {list(grid.keys()) if isinstance(grid, dict) else grid}")
-
-        # Пробуємо різні поля
-        products = grid.get("products") or grid.get("concepts") or []
-        print(f"Products count: {len(products)}")
-        if products:
-            print(f"First product: {str(products[0])[:500]}")
+        products = grid.get("products") or []
+        print(f"First product keys: {list(products[0].keys()) if products else 'none'}")
+        print(f"First product full: {str(products[0])[:1000] if products else 'none'}")
 
         if not products:
             return "🎮 <b>PS Store — знижки та роздачі</b>\n\nНа жаль, зараз немає актуальних пропозицій."
@@ -90,17 +84,24 @@ def get_ps_deals():
         for item in products[:5]:
             if not isinstance(item, dict):
                 continue
-            title = item.get("name", "Невідома гра")
-            price_obj = item.get("price", {})
-            if not isinstance(price_obj, dict):
-                price_obj = {}
-            cut = price_obj.get("discountedPrice", {}).get("discountPercentage", 0)
-            price = price_obj.get("discountedPrice", {}).get("price", "0")
-            regular = price_obj.get("basePrice", "0")
+            title = item.get("localizedStoreDisplayClassification") or item.get("name", "Невідома гра")
             product_id = item.get("id", "")
+
+            # Шукаємо ціну в різних місцях
+            price_obj = item.get("price", {}) or {}
+            webcatalog = item.get("webcatalogProduct", {}) or {}
+            price_info = webcatalog.get("defaultProduct", {}) or {}
+
+            cut = price_obj.get("discountedPrice", {}).get("discountPercentage") or \
+                  price_info.get("price", {}).get("discountedPrice", {}).get("discountPercentage", 0)
+            price = price_obj.get("discountedPrice", {}).get("price") or \
+                    price_info.get("price", {}).get("discountedPrice", {}).get("price", "0")
+            regular = price_obj.get("basePrice") or \
+                      price_info.get("price", {}).get("basePrice", "0")
+
             store_url = f"https://store.playstation.com/ru-ua/product/{product_id}"
 
-            if str(cut) == "100" or str(price) in ["0", "0.00"]:
+            if str(cut) == "100" or str(price) in ["0", "0.00", "None"]:
                 price_str = "🆓 Безкоштовно"
             else:
                 price_str = f"💰 {price} (було {regular})"
