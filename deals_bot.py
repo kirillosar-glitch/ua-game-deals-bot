@@ -57,26 +57,8 @@ def get_ps_deals():
         headers = {"User-Agent": "Mozilla/5.0"}
         r = requests.get(url, headers=headers, timeout=10)
         print(f"PSDeals status: {r.status_code}")
-        print(f"PSDeals response: {r.text[:500]}")
-        data = r.json()
-        items = data.get("data", {}).get("collection", [])
-        if not items:
-            return "🎮 <b>PS Store — знижки та роздачі</b>\n\nНа жаль, зараз немає актуальних пропозицій."
-        lines = ["🎮 <b>PS Store — знижки та роздачі (UA)</b>\n"]
-        for item in items:
-            title = item.get("name", "Невідома гра")
-            cut = item.get("discount", 0)
-            price = item.get("sale_price", "0")
-            regular = item.get("base_price", "0")
-            store_url = item.get("url", "")
-            if str(cut) == "100" or str(price) == "0":
-                price_str = "🆓 Безкоштовно"
-            else:
-                price_str = f"💰 {price} (було {regular})"
-            lines.append(f"<b>{title}</b>")
-            lines.append(f"🔥 -{cut}% | {price_str}")
-            lines.append(f"🔗 <a href='https://psdeals.net{store_url}'>Отримати в PS Store</a>\n")
-        return "\n".join(lines)
+        print(f"PSDeals response: {r.text[:1000]}")
+        return "PS Store: тест"
     except Exception as e:
         return f"PS Store: помилка ({e})"
 
