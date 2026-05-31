@@ -1,6 +1,6 @@
 import requests
 import os
-import time
+import re
 
 TELEGRAM_TOKEN = os.environ["TELEGRAM_TOKEN"]
 TELEGRAM_CHANNEL = "@ua_game_deals"
@@ -55,16 +55,36 @@ def get_steam_deals():
 
 def get_ps_deals():
     try:
-        url = "https://store.playstation.com/ru-ua/pages/deals"
+        url = "https://web.np.playstation.com/api/graphql/v1/op"
         headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+            "Accept": "application/json",
             "Accept-Language": "uk-UA,uk;q=0.9",
-            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+            "Origin": "https://store.playstation.com",
+            "Referer": "https://store.playstation.com/",
         }
-        r = requests.get(url, headers=headers, timeout=15)
-        print(f"PSN status: {r.status_code}")
-        print(f"PSN response length: {len(r.text)}")
-        print(f"PSN response preview: {r.text[:2000]}")
+        params = {
+            "operationName": "categoryGridRetrieve",
+            "variables": '{"id":"STORE-MSF75508-PRICEDROPSCHI","pageArgs":{"size":5,"offset":0},"sortBy":{"name":"PRICE","isAscending":true},"filterBy":[],"facetOptions":[],"country":"UA","language":"ru"}',
+            "extensions": '{"persistedQuery":{"version":1,"sha256Hash":"4ce7d410a4db2c8b635a48c1dcdc30c2b0b4a4a3e8e5e5e5e5e5e5e5e5e5e5e5"}}'
+        }
+        r = requests.get(url, headers=headers, params=params, timeout=15)
+        print(f"PSN GraphQL status: {r.status_code}")
+        print(f"PSN GraphQL response: {r.text[:2000]}")
+
+        # Спробуємо знайти хеш з HTML сторінки
+        html_r = requests.get(
+            "https://store.playstation.com/ru-ua/pages/deals",
+            headers={
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+                "Accept-Language": "uk-UA,uk;q=0.9",
+            },
+            timeout=15
+        )
+        # Шукаємо JS файли
+        js_files = re.findall(r'src="(https://static\.playstation\.com[^"]+\.js)"', html_r.text)
+        print(f"JS files found: {js_files[:3]}")
+
         return "PS Store: тест"
     except Exception as e:
         return f"PS Store: помилка ({e})"
