@@ -53,12 +53,38 @@ def get_steam_deals():
 
 def get_ps_deals():
     try:
-        url = "https://psdeals.net/api/collection?store=ua&order_by=discount&platform=ps4,ps5&start=0&num=5"
-        headers = {"User-Agent": "Mozilla/5.0"}
-        r = requests.get(url, headers=headers, timeout=10)
-        print(f"PSDeals status: {r.status_code}")
-        print(f"PSDeals response: {r.text[:1000]}")
-        return "PS Store: тест"
+        url = "https://psprices.com/region-ua/deals/?platform=ps4,ps5&sort=discount&display=grid"
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+            "Accept": "application/json"
+        }
+        r = requests.get(
+            "https://psprices.com/api/games/search/?region=ua&sort=-discount_percent&has_discount=true&limit=5",
+            headers=headers,
+            timeout=10
+        )
+        print(f"PSPrices status: {r.status_code}")
+        print(f"PSPrices response: {r.text[:1000]}")
+        data = r.json()
+        items = data.get("results", [])
+        if not items:
+            return "🎮 <b>PS Store — знижки та роздачі</b>\n\nНа жаль, зараз немає актуальних пропозицій."
+        lines = ["🎮 <b>PS Store — знижки та роздачі (UA)</b>\n"]
+        for item in items:
+            title = item.get("name", "Невідома гра")
+            cut = item.get("discount_percent", 0)
+            price = item.get("price", "0")
+            regular = item.get("price_base", "0")
+            slug = item.get("slug", "")
+            store_url = f"https://psprices.com/region-ua/game/{slug}/"
+            if int(cut) == 100 or str(price) == "0":
+                price_str = "🆓 Безкоштовно"
+            else:
+                price_str = f"💰 {price} (було {regular})"
+            lines.append(f"<b>{title}</b>")
+            lines.append(f"🔥 -{cut}% | {price_str}")
+            lines.append(f"🔗 <a href='{store_url}'>Отримати в PS Store</a>\n")
+        return "\n".join(lines)
     except Exception as e:
         return f"PS Store: помилка ({e})"
 
