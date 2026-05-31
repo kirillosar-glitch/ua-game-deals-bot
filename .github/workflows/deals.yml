@@ -1,0 +1,27 @@
+name: UA Game Deals Bot
+
+on:
+  schedule:
+    - cron: '0 7 * * *'   # 09:00 Kyiv (UTC+2)
+    - cron: '0 17 * * *'  # 19:00 Kyiv (UTC+2)
+  workflow_dispatch:       # ручной запуск для теста
+
+jobs:
+  send_deals:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run bot
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          ITAD_API_KEY: ${{ secrets.ITAD_API_KEY }}
+        run: python deals_bot.py
