@@ -16,39 +16,22 @@ def send_telegram(text):
     r = requests.post(url, data=data)
     print(r.status_code, r.text[:200])
 
-def get_deals(shop_ids, shop_name, link_text):
+def get_steam_deals():
     url = "https://api.isthereanydeal.com/deals/v2"
     params = {
         "key": ITAD_API_KEY,
         "country": "UA",
-        "shops": ",".join(str(s) for s in shop_ids),
+        "shops": "61",
         "limit": 5,
         "sort": "-cut"
     }
     try:
         r = requests.get(url, params=params)
-        print(f"{shop_name} status: {r.status_code}")
-        print(f"{shop_name} response: {r.text[:500]}")
         data = r.json()
         items = data.get("list", [])
-
         if not items:
-            # Спробуємо без фільтра по країні
-            params2 = {
-                "key": ITAD_API_KEY,
-                "shops": ",".join(str(s) for s in shop_ids),
-                "limit": 5,
-                "sort": "-cut"
-            }
-            r2 = requests.get(url, params=params2)
-            print(f"{shop_name} fallback response: {r2.text[:500]}")
-            data2 = r2.json()
-            items = data2.get("list", [])
-
-        if not items:
-            return f"🎮 <b>{shop_name} — знижки та роздачі</b>\n\nНа жаль, зараз немає актуальних пропозицій."
-
-        lines = [f"🎮 <b>{shop_name} — знижки та роздачі (UA)</b>\n"]
+            return "🎮 <b>Steam — знижки та роздачі</b>\n\nНа жаль, зараз немає актуальних пропозицій."
+        lines = ["🎮 <b>Steam — знижки та роздачі (UA)</b>\n"]
         for item in items:
             title = item.get("title", "Невідома гра")
             deal = item.get("deal", {})
@@ -57,25 +40,49 @@ def get_deals(shop_ids, shop_name, link_text):
             currency = deal.get("price", {}).get("currency", "")
             regular = deal.get("regular", {}).get("amount", 0)
             store_url = deal.get("url", "")
-
             if cut == 100 or price == 0:
                 price_str = "🆓 Безкоштовно"
             else:
                 price_str = f"💰 {price:.0f} {currency} (було {regular:.0f} {currency})"
-
             lines.append(f"<b>{title}</b>")
             lines.append(f"🔥 -{cut}% | {price_str}")
-            lines.append(f"🔗 <a href='{store_url}'>{link_text}</a>\n")
-
+            lines.append(f"🔗 <a href='{store_url}'>Отримати в Steam</a>\n")
         return "\n".join(lines)
     except Exception as e:
-        return f"{shop_name}: помилка ({e})"
+        return f"Steam: помилка ({e})"
+
+def get_ps_deals():
+    try:
+        url = "https://psdeals.net/api/collection?store=ua&order_by=discount&platform=ps4,ps5&start=0&num=5"
+        headers = {"User-Agent": "Mozilla/5.0"}
+        r = requests.get(url, headers=headers, timeout=10)
+        print(f"PSDeals status: {r.status_code}")
+        print(f"PSDeals response: {r.text[:500]}")
+        data = r.json()
+        items = data.get("data", {}).get("collection", [])
+        if not items:
+            return "🎮 <b>PS Store — знижки та роздачі</b>\n\nНа жаль, зараз немає актуальних пропозицій."
+        lines = ["🎮 <b>PS Store — знижки та роздачі (UA)</b>\n"]
+        for item in items:
+            title = item.get("name", "Невідома гра")
+            cut = item.get("discount", 0)
+            price = item.get("sale_price", "0")
+            regular = item.get("base_price", "0")
+            store_url = item.get("url", "")
+            if str(cut) == "100" or str(price) == "0":
+                price_str = "🆓 Безкоштовно"
+            else:
+                price_str = f"💰 {price} (було {regular})"
+            lines.append(f"<b>{title}</b>")
+            lines.append(f"🔥 -{cut}% | {price_str}")
+            lines.append(f"🔗 <a href='https://psdeals.net{store_url}'>Отримати в PS Store</a>\n")
+        return "\n".join(lines)
+    except Exception as e:
+        return f"PS Store: помилка ({e})"
 
 if __name__ == "__main__":
     print("Steam...")
-    send_telegram(get_deals([61], "Steam", "Отримати в Steam"))
+    send_telegram(get_steam_deals())
     print("PS Store...")
-    r_shops = requests.get(f"https://api.isthereanydeal.com/shops/v2?key={ITAD_API_KEY}")
-    print("SHOPS:", r_shops.text[:3000])
-    send_telegram(get_deals([35], "PS Store", "Отримати в PS Store"))
+    send_telegram(get_ps_deals())
     print("Готово!")
