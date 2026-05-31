@@ -72,9 +72,10 @@ def get_deals(shop_ids, shop_name, link_text):
         return f"{shop_name}: помилка ({e})"
 
 if __name__ == "__main__":
-    # Steam ID = 61, PlayStation = 16
     print("Steam...")
     send_telegram(get_deals([61], "Steam", "Отримати в Steam"))
     print("PS Store...")
+    r_shops = requests.get(f"https://api.isthereanydeal.com/shops/v1?key={ITAD_API_KEY}")
+    print("SHOPS:", r_shops.text[:3000])
     send_telegram(get_deals([35], "PS Store", "Отримати в PS Store"))
     print("Готово!")
