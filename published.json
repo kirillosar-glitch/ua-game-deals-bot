@@ -139,6 +139,26 @@
     {
       "slug": "ai-games-advanced-color",
       "date": "2026-06-02"
+    },
+    {
+      "slug": "ai-games",
+      "date": "2026-06-02"
+    },
+    {
+      "slug": "ai-games-custom-theme",
+      "date": "2026-06-02"
+    },
+    {
+      "slug": "ai-games-custom-color",
+      "date": "2026-06-02"
+    },
+    {
+      "slug": "ai-games-hd-ui",
+      "date": "2026-06-02"
+    },
+    {
+      "slug": "veteran-racer",
+      "date": "2026-06-02"
     }
   ]
 }
