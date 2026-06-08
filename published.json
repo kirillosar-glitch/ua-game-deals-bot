@@ -379,6 +379,26 @@
     {
       "slug": "skullbreaker",
       "date": "2026-06-08"
+    },
+    {
+      "slug": "emberstride",
+      "date": "2026-06-08"
+    },
+    {
+      "slug": "wheelborne",
+      "date": "2026-06-08"
+    },
+    {
+      "slug": "ammo-bounce",
+      "date": "2026-06-08"
+    },
+    {
+      "slug": "blast-radius",
+      "date": "2026-06-08"
+    },
+    {
+      "slug": "citadel-siege",
+      "date": "2026-06-08"
     }
   ]
 }
