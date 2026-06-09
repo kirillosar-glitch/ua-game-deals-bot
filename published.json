@@ -399,6 +399,26 @@
     {
       "slug": "citadel-siege",
       "date": "2026-06-08"
+    },
+    {
+      "slug": "master-of-4-swords",
+      "date": "2026-06-09"
+    },
+    {
+      "slug": "the-last-hearth-defense",
+      "date": "2026-06-09"
+    },
+    {
+      "slug": "eldritch-bulwark",
+      "date": "2026-06-09"
+    },
+    {
+      "slug": "blastforge-breach",
+      "date": "2026-06-09"
+    },
+    {
+      "slug": "bombunter",
+      "date": "2026-06-09"
     }
   ]
 }
