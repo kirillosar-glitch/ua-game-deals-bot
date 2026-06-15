@@ -1,86 +1,6 @@
 {
   "published": [
     {
-      "slug": "iq-under-construction",
-      "date": "2026-05-31"
-    },
-    {
-      "slug": "moonrise-fall",
-      "date": "2026-05-31"
-    },
-    {
-      "slug": "drift86",
-      "date": "2026-05-31"
-    },
-    {
-      "slug": "everest-real-climbing-simulator",
-      "date": "2026-05-31"
-    },
-    {
-      "slug": "veteran-racer",
-      "date": "2026-05-31"
-    },
-    {
-      "slug": "impulsow-soundtrack",
-      "date": "2026-05-31"
-    },
-    {
-      "slug": "warhammer-vermintide-2",
-      "date": "2026-05-31"
-    },
-    {
-      "slug": "upside-down",
-      "date": "2026-05-31"
-    },
-    {
-      "slug": "underwater-battles",
-      "date": "2026-05-31"
-    },
-    {
-      "slug": "they-same-from-above",
-      "date": "2026-05-31"
-    },
-    {
-      "slug": "survive-in-space",
-      "date": "2026-05-31"
-    },
-    {
-      "slug": "super-lumberjack",
-      "date": "2026-05-31"
-    },
-    {
-      "slug": "spin-rush",
-      "date": "2026-05-31"
-    },
-    {
-      "slug": "soundfall",
-      "date": "2026-05-31"
-    },
-    {
-      "slug": "simp-simulator-onlysimps-subscription",
-      "date": "2026-05-31"
-    },
-    {
-      "slug": "neon-space-2",
-      "date": "2026-05-31"
-    },
-    {
-      "slug": "neon-space",
-      "date": "2026-05-31"
-    },
-    {
-      "slug": "neon-prism",
-      "date": "2026-05-31"
-    },
-    {
-      "slug": "mr-dubstep",
-      "date": "2026-05-31"
-    },
-    {
-      "slug": "memories-of-a-vagabond",
-      "date": "2026-05-31"
-    },
-    {
       "slug": "gravity-circuit",
       "date": "2026-06-01"
     },
@@ -639,6 +559,26 @@
     {
       "slug": "blast-radius",
       "date": "2026-06-14"
+    },
+    {
+      "slug": "the-red-lantern",
+      "date": "2026-06-15"
+    },
+    {
+      "slug": "tell-me-why-chapter-1",
+      "date": "2026-06-15"
+    },
+    {
+      "slug": "master-of-4-swords",
+      "date": "2026-06-15"
+    },
+    {
+      "slug": "the-last-hearth-defense",
+      "date": "2026-06-15"
+    },
+    {
+      "slug": "eldritch-bulwark",
+      "date": "2026-06-15"
     }
   ]
 }
