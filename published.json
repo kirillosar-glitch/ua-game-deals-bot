@@ -1,46 +1,6 @@
 {
   "published": [
     {
-      "slug": "gravity-circuit",
-      "date": "2026-06-01"
-    },
-    {
-      "slug": "fantasyland-all-dreams",
-      "date": "2026-06-01"
-    },
-    {
-      "slug": "the-first-thrust-of-god-all-levels",
-      "date": "2026-06-01"
-    },
-    {
-      "slug": "crazy-car-cars",
-      "date": "2026-06-01"
-    },
-    {
-      "slug": "crazy-car-deluxe-edition",
-      "date": "2026-06-01"
-    },
-    {
-      "slug": "tell-me-why-chapter-1",
-      "date": "2026-06-01"
-    },
-    {
-      "slug": "fantasyland-deluxe-edition",
-      "date": "2026-06-01"
-    },
-    {
-      "slug": "the-first-thrust-of-god-deluxe-edition",
-      "date": "2026-06-01"
-    },
-    {
-      "slug": "bo-le-judging-horses-the-land-so-fair-and-rare--1",
-      "date": "2026-06-01"
-    },
-    {
-      "slug": "bo-le-judging-horses-the-land-so-fair-and-rare",
-      "date": "2026-06-01"
-    },
-    {
       "slug": "winexy",
       "date": "2026-06-02"
     },
@@ -599,6 +559,26 @@
     {
       "slug": "boom-buddy",
       "date": "2026-06-15"
+    },
+    {
+      "slug": "run-from-the-cops",
+      "date": "2026-06-16"
+    },
+    {
+      "slug": "turbojoy",
+      "date": "2026-06-16"
+    },
+    {
+      "slug": "speed-vortex",
+      "date": "2026-06-16"
+    },
+    {
+      "slug": "aquabike-rush",
+      "date": "2026-06-16"
+    },
+    {
+      "slug": "skullbreaker",
+      "date": "2026-06-16"
     }
   ]
 }
