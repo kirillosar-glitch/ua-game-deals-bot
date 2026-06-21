@@ -1,46 +1,6 @@
 {
   "published": [
     {
-      "slug": "bo-le-judging-horses",
-      "date": "2026-06-06"
-    },
-    {
-      "slug": "everest-real-climbing-simulator",
-      "date": "2026-06-06"
-    },
-    {
-      "slug": "ai-games-advanced-color",
-      "date": "2026-06-06"
-    },
-    {
-      "slug": "ai-games",
-      "date": "2026-06-06"
-    },
-    {
-      "slug": "ai-games-custom-theme",
-      "date": "2026-06-06"
-    },
-    {
-      "slug": "ai-games-custom-color",
-      "date": "2026-06-06"
-    },
-    {
-      "slug": "ai-games-hd-ui",
-      "date": "2026-06-06"
-    },
-    {
-      "slug": "rolling-ball-hd-remaster-trails",
-      "date": "2026-06-06"
-    },
-    {
-      "slug": "rolling-ball-hd-remaster-cores",
-      "date": "2026-06-06"
-    },
-    {
-      "slug": "rolling-ball-hd-remaster-balls",
-      "date": "2026-06-06"
-    },
-    {
       "slug": "tell-me-why-chapter-1",
       "date": "2026-06-07"
     },
@@ -599,6 +559,26 @@
     {
       "slug": "the-great-axe",
       "date": "2026-06-20"
+    },
+    {
+      "slug": "tell-me-why-chapter-1",
+      "date": "2026-06-21"
+    },
+    {
+      "slug": "master-of-4-swords",
+      "date": "2026-06-21"
+    },
+    {
+      "slug": "the-last-hearth-defense",
+      "date": "2026-06-21"
+    },
+    {
+      "slug": "eldritch-bulwark",
+      "date": "2026-06-21"
+    },
+    {
+      "slug": "blastforge-breach",
+      "date": "2026-06-21"
     }
   ]
 }
