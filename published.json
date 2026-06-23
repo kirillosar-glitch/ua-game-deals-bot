@@ -1,46 +1,6 @@
 {
   "published": [
     {
-      "slug": "run-from-the-cops",
-      "date": "2026-06-08"
-    },
-    {
-      "slug": "turbojoy",
-      "date": "2026-06-08"
-    },
-    {
-      "slug": "speed-vortex",
-      "date": "2026-06-08"
-    },
-    {
-      "slug": "aquabike-rush",
-      "date": "2026-06-08"
-    },
-    {
-      "slug": "skullbreaker",
-      "date": "2026-06-08"
-    },
-    {
-      "slug": "emberstride",
-      "date": "2026-06-08"
-    },
-    {
-      "slug": "wheelborne",
-      "date": "2026-06-08"
-    },
-    {
-      "slug": "ammo-bounce",
-      "date": "2026-06-08"
-    },
-    {
-      "slug": "blast-radius",
-      "date": "2026-06-08"
-    },
-    {
-      "slug": "citadel-siege",
-      "date": "2026-06-08"
-    },
-    {
       "slug": "master-of-4-swords",
       "date": "2026-06-09"
     },
@@ -599,6 +559,26 @@
     {
       "slug": "star-hive-the-menace",
       "date": "2026-06-22"
+    },
+    {
+      "slug": "only-straight-and-up",
+      "date": "2026-06-23"
+    },
+    {
+      "slug": "the-pirate-meets-horror-bundle",
+      "date": "2026-06-23"
+    },
+    {
+      "slug": "the-ritual",
+      "date": "2026-06-23"
+    },
+    {
+      "slug": "urban-in-the-woods",
+      "date": "2026-06-23"
+    },
+    {
+      "slug": "spyer",
+      "date": "2026-06-23"
     }
   ]
 }
