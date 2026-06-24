@@ -1,46 +1,6 @@
 {
   "published": [
     {
-      "slug": "master-of-4-swords",
-      "date": "2026-06-09"
-    },
-    {
-      "slug": "the-last-hearth-defense",
-      "date": "2026-06-09"
-    },
-    {
-      "slug": "eldritch-bulwark",
-      "date": "2026-06-09"
-    },
-    {
-      "slug": "blastforge-breach",
-      "date": "2026-06-09"
-    },
-    {
-      "slug": "bombunter",
-      "date": "2026-06-09"
-    },
-    {
-      "slug": "tell-me-why-chapter-1",
-      "date": "2026-06-09"
-    },
-    {
-      "slug": "gravity-circuit",
-      "date": "2026-06-09"
-    },
-    {
-      "slug": "everest-real-climbing-simulator",
-      "date": "2026-06-09"
-    },
-    {
-      "slug": "balls-gone-wild",
-      "date": "2026-06-09"
-    },
-    {
-      "slug": "extraordinary-ball",
-      "date": "2026-06-09"
-    },
-    {
       "slug": "run-from-the-cops",
       "date": "2026-06-10"
     },
@@ -599,6 +559,26 @@
     {
       "slug": "military-attack",
       "date": "2026-06-23"
+    },
+    {
+      "slug": "10-years-anniversary-bundle",
+      "date": "2026-06-24"
+    },
+    {
+      "slug": "battlegrounds-the-pirate-king",
+      "date": "2026-06-24"
+    },
+    {
+      "slug": "the-tower-of-babel",
+      "date": "2026-06-24"
+    },
+    {
+      "slug": "milos-studio",
+      "date": "2026-06-24"
+    },
+    {
+      "slug": "zack-2-celestines-map",
+      "date": "2026-06-24"
     }
   ]
 }
