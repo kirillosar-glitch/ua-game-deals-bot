@@ -1,46 +1,6 @@
 {
   "published": [
     {
-      "slug": "eets",
-      "date": "2026-06-11"
-    },
-    {
-      "slug": "the-red-lantern",
-      "date": "2026-06-11"
-    },
-    {
-      "slug": "happys-humble-burger-farm",
-      "date": "2026-06-11"
-    },
-    {
-      "slug": "master-of-4-swords",
-      "date": "2026-06-11"
-    },
-    {
-      "slug": "the-last-hearth-defense",
-      "date": "2026-06-11"
-    },
-    {
-      "slug": "tell-me-why-chapter-1",
-      "date": "2026-06-11"
-    },
-    {
-      "slug": "gravity-circuit",
-      "date": "2026-06-11"
-    },
-    {
-      "slug": "eldritch-bulwark",
-      "date": "2026-06-11"
-    },
-    {
-      "slug": "blastforge-breach",
-      "date": "2026-06-11"
-    },
-    {
-      "slug": "bombunter",
-      "date": "2026-06-11"
-    },
-    {
       "slug": "wild-terra-2-new-lands",
       "date": "2026-06-12"
     },
@@ -599,6 +559,26 @@
     {
       "slug": "the-first-thrust-of-god-all-levels",
       "date": "2026-06-25"
+    },
+    {
+      "slug": "crazy-car-cars",
+      "date": "2026-06-26"
+    },
+    {
+      "slug": "crazy-car-deluxe-edition",
+      "date": "2026-06-26"
+    },
+    {
+      "slug": "fantasyland-deluxe-edition",
+      "date": "2026-06-26"
+    },
+    {
+      "slug": "the-first-thrust-of-god-deluxe-edition",
+      "date": "2026-06-26"
+    },
+    {
+      "slug": "bo-le-judging-horses-the-land-so-fair-and-rare--1",
+      "date": "2026-06-26"
     }
   ]
 }
