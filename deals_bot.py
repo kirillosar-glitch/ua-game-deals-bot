@@ -48,20 +48,28 @@ def save_history(history, sha):
 def get_candidates():
     """Отримуємо великий пул кандидатів, відсортований по популярності"""
     url = "https://api.isthereanydeal.com/deals/v2"
-    params = {
-        "key": ITAD_API_KEY,
-        "country": "UA",
-        "shops": "61",
-        "limit": 100,
-        "sort": "-popularity",
-    }
-    try:
-        r = requests.get(url, params=params, timeout=20)
-        data = r.json()
-        return data.get("list", [])
-    except Exception as e:
-        print(f"Error fetching candidates: {e}")
-        return []
+    for sort_value in ["-trending", "trending", "-popularity", "popularity", "-cut"]:
+        params = {
+            "key": ITAD_API_KEY,
+            "country": "UA",
+            "shops": "61",
+            "limit": 100,
+            "sort": sort_value,
+        }
+        try:
+            r = requests.get(url, params=params, timeout=20)
+            print(f"sort={sort_value} status={r.status_code}")
+            if r.status_code == 200:
+                data = r.json()
+                items = data.get("list", [])
+                print(f"sort={sort_value} got {len(items)} items")
+                if items:
+                    return items
+            else:
+                print(f"sort={sort_value} error body: {r.text[:200]}")
+        except Exception as e:
+            print(f"sort={sort_value} exception: {e}")
+    return []
 
 def get_game_info(game_id):
     """Отримуємо деталі гри: тип, metacritic, теги"""
