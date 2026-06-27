@@ -579,6 +579,27 @@
     {
       "slug": "fantasyland-all-dreams",
       "date": "2026-06-27"
+    },
+    {
+      "slug": "god-of-war",
+      "date": "2026-06-27"
+    },
+    {
+      "slug": "marvels-spider-man-remastered",
+      "date": "2026-06-27"
+    },
+    {
+      "slug": "no-mans-sky",
+      "date": "2026-06-27"
+    },
+    {
+      "slug": "red-dead-redemption-2",
+      "date": "2026-06-27"
+    },
+    {
+      "slug": "detroit-become-human",
+      "date": "2026-06-27"
     }
-  ]
+  ],
+  "free_dates": []
 }
