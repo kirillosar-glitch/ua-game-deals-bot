@@ -29,12 +29,11 @@ def load_history():
     if r.status_code == 200:
         content = base64.b64decode(r.json()["content"]).decode("utf-8")
         data = json.loads(content)
-        data["_sha"] = r.json()["sha"]
-        return data
-    return {"published": [], "_sha": None}
+        sha = r.json()["sha"]
+        return data, sha
+    return {"published": [], "free_dates": []}, None
 
-def save_history(history):
-    sha = history.pop("_sha", None)
+def save_history(history, sha):
     content = base64.b64encode(json.dumps(history, ensure_ascii=False, indent=2).encode()).decode()
     url = f"https://api.github.com/repos/{GH_REPO}/contents/{HISTORY_FILE}"
     headers = {"Authorization": f"token {GH_TOKEN}"}
@@ -46,114 +45,171 @@ def save_history(history):
         payload["sha"] = sha
     requests.put(url, headers=headers, json=payload)
 
-def get_steam_deals(exclude_ids, min_cut=50, limit=20):
+def get_candidates():
+    """Отримуємо великий пул кандидатів, відсортований по популярності"""
     url = "https://api.isthereanydeal.com/deals/v2"
     params = {
         "key": ITAD_API_KEY,
         "country": "UA",
         "shops": "61",
-        "limit": limit,
-        "sort": "-cut"
+        "limit": 100,
+        "sort": "-popularity",
     }
     try:
-        r = requests.get(url, params=params)
+        r = requests.get(url, params=params, timeout=20)
         data = r.json()
-        items = data.get("list", [])
-
-        # Фільтруємо по порогу та виключаємо вже опубліковані
-        filtered = []
-        for item in items:
-            deal = item.get("deal", {})
-            cut = deal.get("cut", 0)
-            slug = item.get("slug", "")
-            if cut >= min_cut and slug not in exclude_ids:
-                filtered.append(item)
-
-        # Якщо менше 5 — знижуємо поріг
-        if len(filtered) < 5 and min_cut > 20:
-            return get_steam_deals(exclude_ids, min_cut=min_cut-10, limit=limit)
-
-        return filtered[:5]
+        return data.get("list", [])
     except Exception as e:
-        print(f"Steam error: {e}")
+        print(f"Error fetching candidates: {e}")
         return []
 
-def format_steam_post(items):
-    if not items:
-        return "🎮 <b>Steam — знижки та роздачі (UA)</b>\n\nНа жаль, зараз немає актуальних пропозицій."
-    lines = ["🎮 <b>Steam — знижки та роздачі (UA)</b>\n"]
-    for item in items:
-        title = item.get("title", "Невідома гра")
+def get_game_info(game_id):
+    """Отримуємо деталі гри: тип, metacritic, теги"""
+    url = "https://api.isthereanydeal.com/games/info/v2"
+    params = {"key": ITAD_API_KEY, "id": game_id}
+    try:
+        r = requests.get(url, params=params, timeout=10)
+        if r.status_code == 200:
+            return r.json()
+    except Exception as e:
+        print(f"Error fetching game info {game_id}: {e}")
+    return None
+
+if __name__ == "__main__":
+    history, sha = load_history()
+    published = history.get("published", [])
+    free_dates = history.get("free_dates", [])
+
+    today = datetime.utcnow().strftime("%Y-%m-%d")
+    cutoff_30 = (datetime.utcnow() - timedelta(days=30)).strftime("%Y-%m-%d")
+
+    # Очищуємо стару історію (>30 днів)
+    published = [e for e in published if e["date"] >= cutoff_30]
+    free_dates = [d for d in free_dates if d >= cutoff_30]
+    recent_slugs = {e["slug"] for e in published}
+
+    # Чи можна публікувати безкоштовну гру цього тижня (не більше 1-2 за 7 днів)
+    cutoff_7 = (datetime.utcnow() - timedelta(days=7)).strftime("%Y-%m-%d")
+    free_count_week = len([d for d in free_dates if d >= cutoff_7])
+    can_add_free = free_count_week < 2
+
+    candidates = get_candidates()
+    print(f"Got {len(candidates)} candidates")
+
+    selected = []
+    free_in_this_post = 0
+
+    for item in candidates:
+        if len(selected) >= 5:
+            break
+
+        slug = item.get("slug", "")
+        if not slug or slug in recent_slugs:
+            continue
+
         deal = item.get("deal", {})
         cut = deal.get("cut", 0)
         price = deal.get("price", {}).get("amount", 0)
+        is_free = (cut == 100 or price == 0)
+
+        # Безкоштовні - обмежуємо 1 на пост, і тільки якщо не перевищили тижневий ліміт
+        if is_free:
+            if free_in_this_post >= 1 or not can_add_free:
+                continue
+
+        # Перевіряємо тип гри та якість через games/info
+        game_id = item.get("id", "")
+        info = get_game_info(game_id)
+        if not info:
+            continue
+
+        game_type = info.get("type", "game")
+        if game_type != "game":
+            continue  # пропускаємо DLC, soundtracks, packages
+
+        # Перевіряємо якість: Metacritic OR хороший reception
+        reviews = info.get("reviews", []) or []
+        metacritic_score = None
+        steam_positive = None
+        for rev in reviews:
+            if rev.get("source") == "metacritic":
+                metacritic_score = rev.get("score")
+            if rev.get("source") == "steam":
+                steam_positive = rev.get("score")
+
+        # Прохідний бал: Metacritic 70+ ИЛИ Steam reviews 75%+ ИЛИ скидка дуже висока (потенційний хайп)
+        passes_quality = False
+        if metacritic_score and metacritic_score >= 70:
+            passes_quality = True
+        elif steam_positive and steam_positive >= 75:
+            passes_quality = True
+        elif cut >= 60 and not is_free:
+            # Високі знижки на популярні (вже відфільтровано по popularity) теж проходять
+            passes_quality = True
+
+        if not passes_quality and not is_free:
+            continue
+        if is_free and not (metacritic_score or steam_positive):
+            # Для безкоштовних теж бажано мати хоч якийсь reception, інакше пропускаємо
+            if cut == 100 and price == 0:
+                pass  # дозволяємо роздачі навіть без оцінок, це рідкість і цінно
+            else:
+                continue
+
+        title = item.get("title", "Невідома гра")
         currency = deal.get("price", {}).get("currency", "")
         regular = deal.get("regular", {}).get("amount", 0)
         store_url = deal.get("url", "")
-        if cut == 100 or price == 0:
-            price_str = "🆓 Безкоштовно"
-        else:
-            price_str = f"💰 {price:.0f} {currency} (було {regular:.0f} {currency})"
-        lines.append(f"<b>{title}</b>")
-        lines.append(f"🔥 -{cut}% | {price_str}")
-        lines.append(f"🔗 <a href='{store_url}'>Отримати в Steam</a>\n")
-    return "\n".join(lines)
 
-if __name__ == "__main__":
-    # Завантажуємо історію
-    history = load_history()
-    published = history.get("published", [])
+        selected.append({
+            "slug": slug,
+            "title": title,
+            "cut": cut,
+            "price": price,
+            "currency": currency,
+            "regular": regular,
+            "url": store_url,
+            "is_free": is_free,
+            "metacritic": metacritic_score,
+            "steam_score": steam_positive
+        })
 
-    # Визначаємо що виключити
-    # Сьогодні і вчора — повний виняток
-    today = datetime.utcnow().strftime("%Y-%m-%d")
-    yesterday = (datetime.utcnow() - timedelta(days=1)).strftime("%Y-%m-%d")
+        if is_free:
+            free_in_this_post += 1
 
-    exclude_today = set()
-    exclude_yesterday = set()
-    week_slugs = {}
+    print(f"Selected {len(selected)} games")
 
-    for entry in published:
-        if entry["date"] == today:
-            exclude_today.add(entry["slug"])
-        if entry["date"] == yesterday:
-            exclude_yesterday.add(entry["slug"])
-        # Рахуємо частоту за тиждень
-        entry_date = datetime.strptime(entry["date"], "%Y-%m-%d")
-        if (datetime.utcnow() - entry_date).days <= 7:
-            week_slugs[entry["slug"]] = week_slugs.get(entry["slug"], 0) + 1
+    if not selected:
+        print("Нічого підходящого не знайдено, пост не публікуємо")
+    else:
+        lines = ["🎮 <b>Steam — топові знижки та роздачі (UA)</b>\n"]
+        for g in selected:
+            if g["is_free"]:
+                price_str = "🆓 Безкоштовно"
+            else:
+                price_str = f"💰 {g['price']:.0f} {g['currency']} (було {g['regular']:.0f} {g['currency']})"
 
-    # Виключаємо: сьогоднішні + вчорашні
-    exclude_ids = exclude_today | exclude_yesterday
+            quality_badge = ""
+            if g["metacritic"]:
+                quality_badge = f" | ⭐ Metacritic {g['metacritic']}"
+            elif g["steam_score"]:
+                quality_badge = f" | ⭐ Steam {g['steam_score']}%"
 
-    # Серед тижневих — намагаємось виключити ті що вже були більше 1 разу
-    frequent = {s for s, c in week_slugs.items() if c >= 2}
-    exclude_with_frequent = exclude_ids | frequent
+            lines.append(f"<b>{g['title']}</b>")
+            lines.append(f"🔥 -{g['cut']}% | {price_str}{quality_badge}")
+            lines.append(f"🔗 <a href='{g['url']}'>Отримати в Steam</a>\n")
 
-    print(f"Excluded today: {len(exclude_today)}, yesterday: {len(exclude_yesterday)}, frequent: {len(frequent)}")
+        post = "\n".join(lines)
+        send_telegram(post)
 
-    # Отримуємо deals
-    items = get_steam_deals(exclude_with_frequent)
-    # Якщо після виключення частих мало — пробуємо без них
-    if len(items) < 5:
-        items = get_steam_deals(exclude_ids)
+        # Зберігаємо в історію
+        for g in selected:
+            published.append({"slug": g["slug"], "date": today})
+            if g["is_free"]:
+                free_dates.append(today)
 
-    # Публікуємо
-    post = format_steam_post(items)
-    send_telegram(post)
-
-    # Зберігаємо в історію
-    for item in items:
-        slug = item.get("slug", "")
-        if slug:
-            published.append({"slug": slug, "date": today})
-
-    # Чистимо старі записи (старше 14 днів)
-    cutoff = (datetime.utcnow() - timedelta(days=14)).strftime("%Y-%m-%d")
-    published = [e for e in published if e["date"] >= cutoff]
-
-    history["published"] = published
-    history["_sha"] = load_history().get("_sha")
-    save_history(history)
+        history["published"] = published
+        history["free_dates"] = free_dates
+        save_history(history, sha)
 
     print("Готово!")
