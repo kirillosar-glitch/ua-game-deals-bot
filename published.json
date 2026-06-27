@@ -1,605 +1,286 @@
-{
-  "published": [
-    {
-      "slug": "eets",
-      "date": "2026-06-13"
-    },
-    {
-      "slug": "the-red-lantern",
-      "date": "2026-06-13"
-    },
-    {
-      "slug": "happys-humble-burger-farm",
-      "date": "2026-06-13"
-    },
-    {
-      "slug": "tell-me-why-chapter-1",
-      "date": "2026-06-13"
-    },
-    {
-      "slug": "gravity-circuit",
-      "date": "2026-06-13"
-    },
-    {
-      "slug": "master-of-4-swords",
-      "date": "2026-06-13"
-    },
-    {
-      "slug": "the-last-hearth-defense",
-      "date": "2026-06-13"
-    },
-    {
-      "slug": "eldritch-bulwark",
-      "date": "2026-06-13"
-    },
-    {
-      "slug": "blastforge-breach",
-      "date": "2026-06-13"
-    },
-    {
-      "slug": "bombunter",
-      "date": "2026-06-13"
-    },
-    {
-      "slug": "wild-terra-2-new-lands",
-      "date": "2026-06-14"
-    },
-    {
-      "slug": "run-from-the-cops",
-      "date": "2026-06-14"
-    },
-    {
-      "slug": "turbojoy",
-      "date": "2026-06-14"
-    },
-    {
-      "slug": "speed-vortex",
-      "date": "2026-06-14"
-    },
-    {
-      "slug": "aquabike-rush",
-      "date": "2026-06-14"
-    },
-    {
-      "slug": "skullbreaker",
-      "date": "2026-06-14"
-    },
-    {
-      "slug": "emberstride",
-      "date": "2026-06-14"
-    },
-    {
-      "slug": "wheelborne",
-      "date": "2026-06-14"
-    },
-    {
-      "slug": "ammo-bounce",
-      "date": "2026-06-14"
-    },
-    {
-      "slug": "blast-radius",
-      "date": "2026-06-14"
-    },
-    {
-      "slug": "the-red-lantern",
-      "date": "2026-06-15"
-    },
-    {
-      "slug": "tell-me-why-chapter-1",
-      "date": "2026-06-15"
-    },
-    {
-      "slug": "master-of-4-swords",
-      "date": "2026-06-15"
-    },
-    {
-      "slug": "the-last-hearth-defense",
-      "date": "2026-06-15"
-    },
-    {
-      "slug": "eldritch-bulwark",
-      "date": "2026-06-15"
-    },
-    {
-      "slug": "blastforge-breach",
-      "date": "2026-06-15"
-    },
-    {
-      "slug": "bombunter",
-      "date": "2026-06-15"
-    },
-    {
-      "slug": "balls-gone-wild",
-      "date": "2026-06-15"
-    },
-    {
-      "slug": "extraordinary-ball",
-      "date": "2026-06-15"
-    },
-    {
-      "slug": "boom-buddy",
-      "date": "2026-06-15"
-    },
-    {
-      "slug": "run-from-the-cops",
-      "date": "2026-06-16"
-    },
-    {
-      "slug": "turbojoy",
-      "date": "2026-06-16"
-    },
-    {
-      "slug": "speed-vortex",
-      "date": "2026-06-16"
-    },
-    {
-      "slug": "aquabike-rush",
-      "date": "2026-06-16"
-    },
-    {
-      "slug": "skullbreaker",
-      "date": "2026-06-16"
-    },
-    {
-      "slug": "emberstride",
-      "date": "2026-06-16"
-    },
-    {
-      "slug": "wheelborne",
-      "date": "2026-06-16"
-    },
-    {
-      "slug": "ammo-bounce",
-      "date": "2026-06-16"
-    },
-    {
-      "slug": "blast-radius",
-      "date": "2026-06-16"
-    },
-    {
-      "slug": "the-great-axe",
-      "date": "2026-06-16"
-    },
-    {
-      "slug": "the-red-lantern",
-      "date": "2026-06-17"
-    },
-    {
-      "slug": "tell-me-why-chapter-1",
-      "date": "2026-06-17"
-    },
-    {
-      "slug": "master-of-4-swords",
-      "date": "2026-06-17"
-    },
-    {
-      "slug": "the-last-hearth-defense",
-      "date": "2026-06-17"
-    },
-    {
-      "slug": "eldritch-bulwark",
-      "date": "2026-06-17"
-    },
-    {
-      "slug": "blastforge-breach",
-      "date": "2026-06-17"
-    },
-    {
-      "slug": "bombunter",
-      "date": "2026-06-17"
-    },
-    {
-      "slug": "balls-gone-wild",
-      "date": "2026-06-17"
-    },
-    {
-      "slug": "extraordinary-ball",
-      "date": "2026-06-17"
-    },
-    {
-      "slug": "boom-buddy",
-      "date": "2026-06-17"
-    },
-    {
-      "slug": "run-from-the-cops",
-      "date": "2026-06-18"
-    },
-    {
-      "slug": "turbojoy",
-      "date": "2026-06-18"
-    },
-    {
-      "slug": "speed-vortex",
-      "date": "2026-06-18"
-    },
-    {
-      "slug": "aquabike-rush",
-      "date": "2026-06-18"
-    },
-    {
-      "slug": "skullbreaker",
-      "date": "2026-06-18"
-    },
-    {
-      "slug": "emberstride",
-      "date": "2026-06-18"
-    },
-    {
-      "slug": "wheelborne",
-      "date": "2026-06-18"
-    },
-    {
-      "slug": "ammo-bounce",
-      "date": "2026-06-18"
-    },
-    {
-      "slug": "blast-radius",
-      "date": "2026-06-18"
-    },
-    {
-      "slug": "the-great-axe",
-      "date": "2026-06-18"
-    },
-    {
-      "slug": "tell-me-why-chapter-1",
-      "date": "2026-06-19"
-    },
-    {
-      "slug": "master-of-4-swords",
-      "date": "2026-06-19"
-    },
-    {
-      "slug": "the-last-hearth-defense",
-      "date": "2026-06-19"
-    },
-    {
-      "slug": "eldritch-bulwark",
-      "date": "2026-06-19"
-    },
-    {
-      "slug": "blastforge-breach",
-      "date": "2026-06-19"
-    },
-    {
-      "slug": "bombunter",
-      "date": "2026-06-19"
-    },
-    {
-      "slug": "balls-gone-wild",
-      "date": "2026-06-19"
-    },
-    {
-      "slug": "extraordinary-ball",
-      "date": "2026-06-19"
-    },
-    {
-      "slug": "boom-buddy",
-      "date": "2026-06-19"
-    },
-    {
-      "slug": "the-red-hood-hunting-the-wolf",
-      "date": "2026-06-19"
-    },
-    {
-      "slug": "run-from-the-cops",
-      "date": "2026-06-20"
-    },
-    {
-      "slug": "turbojoy",
-      "date": "2026-06-20"
-    },
-    {
-      "slug": "speed-vortex",
-      "date": "2026-06-20"
-    },
-    {
-      "slug": "aquabike-rush",
-      "date": "2026-06-20"
-    },
-    {
-      "slug": "skullbreaker",
-      "date": "2026-06-20"
-    },
-    {
-      "slug": "emberstride",
-      "date": "2026-06-20"
-    },
-    {
-      "slug": "wheelborne",
-      "date": "2026-06-20"
-    },
-    {
-      "slug": "ammo-bounce",
-      "date": "2026-06-20"
-    },
-    {
-      "slug": "blast-radius",
-      "date": "2026-06-20"
-    },
-    {
-      "slug": "the-great-axe",
-      "date": "2026-06-20"
-    },
-    {
-      "slug": "tell-me-why-chapter-1",
-      "date": "2026-06-21"
-    },
-    {
-      "slug": "master-of-4-swords",
-      "date": "2026-06-21"
-    },
-    {
-      "slug": "the-last-hearth-defense",
-      "date": "2026-06-21"
-    },
-    {
-      "slug": "eldritch-bulwark",
-      "date": "2026-06-21"
-    },
-    {
-      "slug": "blastforge-breach",
-      "date": "2026-06-21"
-    },
-    {
-      "slug": "only-straight-and-up",
-      "date": "2026-06-21"
-    },
-    {
-      "slug": "the-pirate-meets-horror-bundle",
-      "date": "2026-06-21"
-    },
-    {
-      "slug": "the-ritual",
-      "date": "2026-06-21"
-    },
-    {
-      "slug": "the-mythical-city-4",
-      "date": "2026-06-21"
-    },
-    {
-      "slug": "urban-in-the-woods",
-      "date": "2026-06-21"
-    },
-    {
-      "slug": "10-years-anniversary-bundle",
-      "date": "2026-06-22"
-    },
-    {
-      "slug": "battlegrounds-the-pirate-king",
-      "date": "2026-06-22"
-    },
-    {
-      "slug": "the-tower-of-babel",
-      "date": "2026-06-22"
-    },
-    {
-      "slug": "milos-studio",
-      "date": "2026-06-22"
-    },
-    {
-      "slug": "zack-2-celestines-map",
-      "date": "2026-06-22"
-    },
-    {
-      "slug": "the-thief",
-      "date": "2026-06-22"
-    },
-    {
-      "slug": "suicide-squad-kill-the-justice-league-digital-deluxe-edition-upgrade",
-      "date": "2026-06-22"
-    },
-    {
-      "slug": "suicide-squad-kill-the-justice-league-digital-deluxe-edition",
-      "date": "2026-06-22"
-    },
-    {
-      "slug": "suicide-squad-kill-the-justice-league",
-      "date": "2026-06-22"
-    },
-    {
-      "slug": "star-hive-the-menace",
-      "date": "2026-06-22"
-    },
-    {
-      "slug": "only-straight-and-up",
-      "date": "2026-06-23"
-    },
-    {
-      "slug": "the-pirate-meets-horror-bundle",
-      "date": "2026-06-23"
-    },
-    {
-      "slug": "the-ritual",
-      "date": "2026-06-23"
-    },
-    {
-      "slug": "urban-in-the-woods",
-      "date": "2026-06-23"
-    },
-    {
-      "slug": "spyer",
-      "date": "2026-06-23"
-    },
-    {
-      "slug": "tell-me-why-chapter-1",
-      "date": "2026-06-23"
-    },
-    {
-      "slug": "rescuer",
-      "date": "2026-06-23"
-    },
-    {
-      "slug": "the-president--1",
-      "date": "2026-06-23"
-    },
-    {
-      "slug": "obsessive-revenge",
-      "date": "2026-06-23"
-    },
-    {
-      "slug": "military-attack",
-      "date": "2026-06-23"
-    },
-    {
-      "slug": "10-years-anniversary-bundle",
-      "date": "2026-06-24"
-    },
-    {
-      "slug": "battlegrounds-the-pirate-king",
-      "date": "2026-06-24"
-    },
-    {
-      "slug": "the-tower-of-babel",
-      "date": "2026-06-24"
-    },
-    {
-      "slug": "milos-studio",
-      "date": "2026-06-24"
-    },
-    {
-      "slug": "zack-2-celestines-map",
-      "date": "2026-06-24"
-    },
-    {
-      "slug": "the-thief",
-      "date": "2026-06-24"
-    },
-    {
-      "slug": "suicide-squad-kill-the-justice-league-digital-deluxe-edition-upgrade",
-      "date": "2026-06-24"
-    },
-    {
-      "slug": "suicide-squad-kill-the-justice-league-digital-deluxe-edition",
-      "date": "2026-06-24"
-    },
-    {
-      "slug": "suicide-squad-kill-the-justice-league",
-      "date": "2026-06-24"
-    },
-    {
-      "slug": "star-hive-the-menace",
-      "date": "2026-06-24"
-    },
-    {
-      "slug": "spyer",
-      "date": "2026-06-25"
-    },
-    {
-      "slug": "rescuer",
-      "date": "2026-06-25"
-    },
-    {
-      "slug": "the-president--1",
-      "date": "2026-06-25"
-    },
-    {
-      "slug": "obsessive-revenge",
-      "date": "2026-06-25"
-    },
-    {
-      "slug": "military-attack",
-      "date": "2026-06-25"
-    },
-    {
-      "slug": "rolling-ball-hd-remaster-levels",
-      "date": "2026-06-25"
-    },
-    {
-      "slug": "a-diamond-display",
-      "date": "2026-06-25"
-    },
-    {
-      "slug": "megans-adventure-always-start-with-1000-lives",
-      "date": "2026-06-25"
-    },
-    {
-      "slug": "fantasyland-all-dreams",
-      "date": "2026-06-25"
-    },
-    {
-      "slug": "the-first-thrust-of-god-all-levels",
-      "date": "2026-06-25"
-    },
-    {
-      "slug": "crazy-car-cars",
-      "date": "2026-06-26"
-    },
-    {
-      "slug": "crazy-car-deluxe-edition",
-      "date": "2026-06-26"
-    },
-    {
-      "slug": "fantasyland-deluxe-edition",
-      "date": "2026-06-26"
-    },
-    {
-      "slug": "the-first-thrust-of-god-deluxe-edition",
-      "date": "2026-06-26"
-    },
-    {
-      "slug": "bo-le-judging-horses-the-land-so-fair-and-rare--1",
-      "date": "2026-06-26"
-    },
-    {
-      "slug": "popgoes-arcade",
-      "date": "2026-06-26"
-    },
-    {
-      "slug": "bo-le-judging-horses-the-land-so-fair-and-rare",
-      "date": "2026-06-26"
-    },
-    {
-      "slug": "bo-le-judging-horses",
-      "date": "2026-06-26"
-    },
-    {
-      "slug": "can-deliver-survival-kit",
-      "date": "2026-06-26"
-    },
-    {
-      "slug": "catch-the-turtle",
-      "date": "2026-06-26"
-    },
-    {
-      "slug": "rolling-ball-hd-remaster-levels",
-      "date": "2026-06-27"
-    },
-    {
-      "slug": "a-diamond-display",
-      "date": "2026-06-27"
-    },
-    {
-      "slug": "hu-li-she-shou-fox-shooter",
-      "date": "2026-06-27"
-    },
-    {
-      "slug": "megans-adventure-always-start-with-1000-lives",
-      "date": "2026-06-27"
-    },
-    {
-      "slug": "fantasyland-all-dreams",
-      "date": "2026-06-27"
-    },
-    {
-      "slug": "god-of-war",
-      "date": "2026-06-27"
-    },
-    {
-      "slug": "marvels-spider-man-remastered",
-      "date": "2026-06-27"
-    },
-    {
-      "slug": "no-mans-sky",
-      "date": "2026-06-27"
-    },
-    {
-      "slug": "red-dead-redemption-2",
-      "date": "2026-06-27"
-    },
-    {
-      "slug": "detroit-become-human",
-      "date": "2026-06-27"
+import requests
+import os
+import json
+import base64
+from datetime import datetime, timedelta
+
+TELEGRAM_TOKEN = os.environ["TELEGRAM_TOKEN"]
+TELEGRAM_CHANNEL = "@ua_game_deals"
+ITAD_API_KEY = os.environ["ITAD_API_KEY"]
+GH_TOKEN = os.environ["GH_TOKEN"]
+GH_REPO = "kirillosar-glitch/ua-game-deals-bot"
+HISTORY_FILE = "published.json"
+
+def send_telegram(text):
+    url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
+    data = {
+        "chat_id": TELEGRAM_CHANNEL,
+        "text": text,
+        "parse_mode": "HTML",
+        "disable_web_page_preview": False
     }
-  ],
-  "free_dates": []
-}
+    r = requests.post(url, data=data)
+    print(r.status_code, r.text[:200])
+
+def load_history():
+    url = f"https://api.github.com/repos/{GH_REPO}/contents/{HISTORY_FILE}"
+    headers = {"Authorization": f"token {GH_TOKEN}"}
+    r = requests.get(url, headers=headers)
+    if r.status_code == 200:
+        content = base64.b64decode(r.json()["content"]).decode("utf-8")
+        data = json.loads(content)
+        sha = r.json()["sha"]
+        return data, sha
+    return {"published": [], "free_dates": [], "post_count": 0}, None
+
+def save_history(history, sha):
+    content = base64.b64encode(json.dumps(history, ensure_ascii=False, indent=2).encode()).decode()
+    url = f"https://api.github.com/repos/{GH_REPO}/contents/{HISTORY_FILE}"
+    headers = {"Authorization": f"token {GH_TOKEN}"}
+    payload = {
+        "message": "Update published history",
+        "content": content
+    }
+    if sha:
+        payload["sha"] = sha
+    requests.put(url, headers=headers, json=payload)
+
+def get_candidates(sort_options):
+    url = "https://api.isthereanydeal.com/deals/v2"
+    for sort_value in sort_options:
+        params = {
+            "key": ITAD_API_KEY,
+            "country": "UA",
+            "shops": "61",
+            "limit": 100,
+            "sort": sort_value,
+        }
+        try:
+            r = requests.get(url, params=params, timeout=20)
+            if r.status_code == 200:
+                items = r.json().get("list", [])
+                if items:
+                    print(f"sort={sort_value} got {len(items)} items")
+                    return items
+        except Exception as e:
+            print(f"sort={sort_value} exception: {e}")
+    return []
+
+def get_game_info(game_id):
+    url = "https://api.isthereanydeal.com/games/info/v2"
+    params = {"key": ITAD_API_KEY, "id": game_id}
+    try:
+        r = requests.get(url, params=params, timeout=10)
+        if r.status_code == 200:
+            return r.json()
+    except Exception as e:
+        print(f"Error fetching game info {game_id}: {e}")
+    return None
+
+def is_recent_release(release_date_str, days=730):
+    if not release_date_str:
+        return False
+    try:
+        release_date = datetime.strptime(release_date_str[:10], "%Y-%m-%d")
+        return (datetime.utcnow() - release_date).days <= days
+    except Exception:
+        return False
+
+def build_game_entry(item, info):
+    deal = item.get("deal", {})
+    cut = deal.get("cut", 0)
+    price = deal.get("price", {}).get("amount", 0)
+    currency = deal.get("price", {}).get("currency", "")
+    regular = deal.get("regular", {}).get("amount", 0)
+    store_url = deal.get("url", "")
+    title = item.get("title", "Невідома гра")
+    slug = item.get("slug", "")
+    is_free = (cut == 100 or price == 0)
+
+    reviews = (info or {}).get("reviews", []) or []
+    metacritic_score = None
+    steam_positive = None
+    for rev in reviews:
+        if rev.get("source") == "metacritic":
+            metacritic_score = rev.get("score")
+        if rev.get("source") == "steam":
+            steam_positive = rev.get("score")
+
+    release_date = (info or {}).get("releaseDate")
+
+    return {
+        "slug": slug,
+        "title": title,
+        "cut": cut,
+        "price": price,
+        "currency": currency,
+        "regular": regular,
+        "url": store_url,
+        "is_free": is_free,
+        "metacritic": metacritic_score,
+        "steam_score": steam_positive,
+        "release_date": release_date,
+    }
+
+def select_aaa(candidates, recent_slugs, can_add_free):
+    selected = []
+    free_used = 0
+    for item in candidates:
+        if len(selected) >= 5:
+            break
+        slug = item.get("slug", "")
+        if not slug or slug in recent_slugs:
+            continue
+        deal = item.get("deal", {})
+        cut = deal.get("cut", 0)
+        price = deal.get("price", {}).get("amount", 0)
+        is_free = (cut == 100 or price == 0)
+        if is_free:
+            if free_used >= 1 or not can_add_free:
+                continue
+
+        info = get_game_info(item.get("id", ""))
+        if not info or info.get("type") != "game":
+            continue
+
+        entry = build_game_entry(item, info)
+
+        passes_quality = False
+        if entry["metacritic"] and entry["metacritic"] >= 70:
+            passes_quality = True
+        elif entry["steam_score"] and entry["steam_score"] >= 75:
+            passes_quality = True
+        elif cut >= 60 and not is_free:
+            passes_quality = True
+
+        if is_free:
+            if not (cut == 100 and price == 0):
+                continue
+        elif not passes_quality:
+            continue
+
+        selected.append(entry)
+        if is_free:
+            free_used += 1
+
+    return selected
+
+def select_indie(candidates, recent_slugs, can_add_free):
+    """Інді та хайпові новинки: менш суворий критерій якості, акцент на свіжість релізу та знижку"""
+    selected = []
+    free_used = 0
+    for item in candidates:
+        if len(selected) >= 5:
+            break
+        slug = item.get("slug", "")
+        if not slug or slug in recent_slugs:
+            continue
+        deal = item.get("deal", {})
+        cut = deal.get("cut", 0)
+        price = deal.get("price", {}).get("amount", 0)
+        is_free = (cut == 100 or price == 0)
+        if is_free:
+            if free_used >= 1 or not can_add_free:
+                continue
+
+        info = get_game_info(item.get("id", ""))
+        if not info or info.get("type") != "game":
+            continue
+
+        entry = build_game_entry(item, info)
+        recent = is_recent_release(entry["release_date"])
+
+        # Для інді: або хороший steam score (>=70%), або дуже свіжий реліз з помітною знижкою, або висока знижка взагалі
+        passes_quality = False
+        if entry["steam_score"] and entry["steam_score"] >= 70:
+            passes_quality = True
+        elif recent and cut >= 30:
+            passes_quality = True
+        elif cut >= 70:
+            passes_quality = True
+
+        if is_free:
+            if not (cut == 100 and price == 0):
+                continue
+        elif not passes_quality:
+            continue
+
+        selected.append(entry)
+        if is_free:
+            free_used += 1
+
+    return selected
+
+def format_post(selected, post_type):
+    if not selected:
+        return None
+    if post_type == "aaa":
+        header = "🎮 <b>Steam — топові знижки (UA)</b>\n"
+    else:
+        header = "🕹 <b>Steam — інді та новинки зі знижками (UA)</b>\n"
+
+    lines = [header]
+    for g in selected:
+        if g["is_free"]:
+            price_str = "🆓 Безкоштовно"
+        else:
+            price_str = f"💰 {g['price']:.0f} {g['currency']} (було {g['regular']:.0f} {g['currency']})"
+
+        quality_badge = ""
+        if g["metacritic"]:
+            quality_badge = f" | ⭐ Metacritic {g['metacritic']}"
+        elif g["steam_score"]:
+            quality_badge = f" | ⭐ Steam {g['steam_score']}%"
+
+        lines.append(f"<b>{g['title']}</b>")
+        lines.append(f"🔥 -{g['cut']}% | {price_str}{quality_badge}")
+        lines.append(f"🔗 <a href='{g['url']}'>Отримати в Steam</a>\n")
+
+    return "\n".join(lines)
+
+if __name__ == "__main__":
+    history, sha = load_history()
+    published = history.get("published", [])
+    free_dates = history.get("free_dates", [])
+    post_count = history.get("post_count", 0)
+
+    today = datetime.utcnow().strftime("%Y-%m-%d")
+    cutoff_30 = (datetime.utcnow() - timedelta(days=30)).strftime("%Y-%m-%d")
+    cutoff_7 = (datetime.utcnow() - timedelta(days=7)).strftime("%Y-%m-%d")
+
+    published = [e for e in published if e["date"] >= cutoff_30]
+    free_dates = [d for d in free_dates if d >= cutoff_30]
+    recent_slugs = {e["slug"] for e in published}
+
+    free_count_week = len([d for d in free_dates if d >= cutoff_7])
+    can_add_free = free_count_week < 2
+
+    # Чергування: парний post_count -> AAA, непарний -> indie
+    post_type = "aaa" if post_count % 2 == 0 else "indie"
+    print(f"Post #{post_count}, type: {post_type}")
+
+    if post_type == "aaa":
+        candidates = get_candidates(["-trending", "trending", "-popularity", "-cut"])
+        selected = select_aaa(candidates, recent_slugs, can_add_free)
+    else:
+        candidates = get_candidates(["-cut", "-trending", "trending"])
+        selected = select_indie(candidates, recent_slugs, can_add_free)
+
+    print(f"Selected {len(selected)} games for type {post_type}")
+
+    post = format_post(selected, post_type)
+
+    if not post:
+        print("Нічого підходящого не знайдено, пост не публікуємо")
+    else:
+        send_telegram(post)
+        for g in selected:
+            published.append({"slug": g["slug"], "date": today})
+            if g["is_free"]:
+                free_dates.append(today)
+        history["published"] = published
+        history["free_dates"] = free_dates
+        history["post_count"] = post_count + 1
+        save_history(history, sha)
+
+    print("Готово!")
