@@ -2,8 +2,7 @@ name: UA Game Deals Bot
 
 on:
   schedule:
-    - cron: '0 8 * * *'    # 10:00 Kyiv (UTC+2, літо UTC+3 = 7:00 UTC)
-    - cron: '0 16 * * *'   # 19:00 Kyiv
+    - cron: '0 9 * * 1,3,5'   # Пн/Ср/Пт в 12:00 Kyiv (UTC+3)
   workflow_dispatch:       # ручной запуск для теста
 
 jobs:
