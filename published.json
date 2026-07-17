@@ -199,8 +199,30 @@
     {
       "slug": "celeste",
       "date": "2026-07-15"
+    },
+    {
+      "slug": "catch-me",
+      "date": "2026-07-17"
+    },
+    {
+      "slug": "ashen",
+      "date": "2026-07-17"
+    },
+    {
+      "slug": "system-shock",
+      "date": "2026-07-17"
+    },
+    {
+      "slug": "a-plague-tale-requiem",
+      "date": "2026-07-17"
+    },
+    {
+      "slug": "bayonetta",
+      "date": "2026-07-17"
     }
   ],
-  "free_dates": [],
+  "free_dates": [
+    "2026-07-17"
+  ],
   "post_count": 0
 }
