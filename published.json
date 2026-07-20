@@ -219,10 +219,31 @@
     {
       "slug": "bayonetta",
       "date": "2026-07-17"
+    },
+    {
+      "slug": "the-life-and-suffering-of-sir-brante",
+      "date": "2026-07-20"
+    },
+    {
+      "slug": "shadow-tactics-blades-of-the-shogun",
+      "date": "2026-07-20"
+    },
+    {
+      "slug": "warhammer-40000-darktide",
+      "date": "2026-07-20"
+    },
+    {
+      "slug": "the-wild-eight",
+      "date": "2026-07-20"
+    },
+    {
+      "slug": "songs-of-conquest",
+      "date": "2026-07-20"
     }
   ],
   "free_dates": [
-    "2026-07-17"
+    "2026-07-17",
+    "2026-07-20"
   ],
   "post_count": 0
 }
