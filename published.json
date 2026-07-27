@@ -279,11 +279,32 @@
     {
       "slug": "frostpunk",
       "date": "2026-07-24"
+    },
+    {
+      "slug": "yet-another-zombie-defense-hd",
+      "date": "2026-07-27"
+    },
+    {
+      "slug": "metal-gear-solid-d-snake-eater",
+      "date": "2026-07-27"
+    },
+    {
+      "slug": "dragons-dogma-dark-arisen",
+      "date": "2026-07-27"
+    },
+    {
+      "slug": "sid-meiers-civilization-vi",
+      "date": "2026-07-27"
+    },
+    {
+      "slug": "inscryption",
+      "date": "2026-07-27"
     }
   ],
   "free_dates": [
     "2026-07-17",
-    "2026-07-20"
+    "2026-07-20",
+    "2026-07-27"
   ],
   "post_count": 0
 }
