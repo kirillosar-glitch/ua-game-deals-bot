@@ -1,46 +1,6 @@
 {
   "published": [
     {
-      "slug": "god-of-war",
-      "date": "2026-06-27"
-    },
-    {
-      "slug": "marvels-spider-man-remastered",
-      "date": "2026-06-27"
-    },
-    {
-      "slug": "no-mans-sky",
-      "date": "2026-06-27"
-    },
-    {
-      "slug": "red-dead-redemption-2",
-      "date": "2026-06-27"
-    },
-    {
-      "slug": "detroit-become-human",
-      "date": "2026-06-27"
-    },
-    {
-      "slug": "marvels-spider-man-miles-morales",
-      "date": "2026-06-27"
-    },
-    {
-      "slug": "the-binding-of-isaac-rebirth",
-      "date": "2026-06-27"
-    },
-    {
-      "slug": "uncharted-legacy-of-thieves-collection",
-      "date": "2026-06-27"
-    },
-    {
-      "slug": "resident-evil-4-2023",
-      "date": "2026-06-27"
-    },
-    {
-      "slug": "voidwrought",
-      "date": "2026-06-27"
-    },
-    {
       "slug": "the-invincible",
       "date": "2026-06-29"
     },
@@ -299,6 +259,26 @@
     {
       "slug": "inscryption",
       "date": "2026-07-27"
+    },
+    {
+      "slug": "lego-star-wars-the-skywalker-saga",
+      "date": "2026-07-29"
+    },
+    {
+      "slug": "nioh-complete-edition",
+      "date": "2026-07-29"
+    },
+    {
+      "slug": "another-crabs-treasure",
+      "date": "2026-07-29"
+    },
+    {
+      "slug": "nioh-2-the-complete-edition",
+      "date": "2026-07-29"
+    },
+    {
+      "slug": "thymesia",
+      "date": "2026-07-29"
     }
   ],
   "free_dates": [
