@@ -1,26 +1,6 @@
 {
   "published": [
     {
-      "slug": "the-invincible",
-      "date": "2026-06-29"
-    },
-    {
-      "slug": "rollercoaster-tycoon-3-complete-edition",
-      "date": "2026-06-29"
-    },
-    {
-      "slug": "devil-may-cry-5-and-vergil",
-      "date": "2026-06-29"
-    },
-    {
-      "slug": "kingdom-come-deliverance-ii",
-      "date": "2026-06-29"
-    },
-    {
-      "slug": "hell-is-us",
-      "date": "2026-06-29"
-    },
-    {
       "slug": "disco-elysium-the-final-cut",
       "date": "2026-07-01"
     },
@@ -279,6 +259,26 @@
     {
       "slug": "thymesia",
       "date": "2026-07-29"
+    },
+    {
+      "slug": "marvels-spider-man-remastered",
+      "date": "2026-07-31"
+    },
+    {
+      "slug": "marvels-spider-man-miles-morales",
+      "date": "2026-07-31"
+    },
+    {
+      "slug": "doom-eternal",
+      "date": "2026-07-31"
+    },
+    {
+      "slug": "the-elder-scrolls-v-skyrim-special-edition",
+      "date": "2026-07-31"
+    },
+    {
+      "slug": "fallout-4",
+      "date": "2026-07-31"
     }
   ],
   "free_dates": [
