@@ -1,46 +1,6 @@
 {
   "published": [
     {
-      "slug": "disco-elysium-the-final-cut",
-      "date": "2026-07-01"
-    },
-    {
-      "slug": "warhammer-40000-space-marine-2",
-      "date": "2026-07-01"
-    },
-    {
-      "slug": "cyberpunk-2077",
-      "date": "2026-07-01"
-    },
-    {
-      "slug": "monster-hunter-rise",
-      "date": "2026-07-01"
-    },
-    {
-      "slug": "lords-of-the-fallen",
-      "date": "2026-07-01"
-    },
-    {
-      "slug": "i-have-no-mouth-and-i-must-scream",
-      "date": "2026-07-03"
-    },
-    {
-      "slug": "atomic-heart",
-      "date": "2026-07-03"
-    },
-    {
-      "slug": "robocop-rogue-city",
-      "date": "2026-07-03"
-    },
-    {
-      "slug": "deep-rock-galactic",
-      "date": "2026-07-03"
-    },
-    {
-      "slug": "metro-exodus",
-      "date": "2026-07-03"
-    },
-    {
       "slug": "watch_dogs-2",
       "date": "2026-07-06"
     },
@@ -279,6 +239,26 @@
     {
       "slug": "fallout-4",
       "date": "2026-07-31"
+    },
+    {
+      "slug": "cyberpunk-2077",
+      "date": "2026-08-03"
+    },
+    {
+      "slug": "resident-evil-4-2023",
+      "date": "2026-08-03"
+    },
+    {
+      "slug": "robocop-rogue-city",
+      "date": "2026-08-03"
+    },
+    {
+      "slug": "borderlands-3",
+      "date": "2026-08-03"
+    },
+    {
+      "slug": "the-invincible",
+      "date": "2026-08-03"
     }
   ],
   "free_dates": [
