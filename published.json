@@ -1,26 +1,6 @@
 {
   "published": [
     {
-      "slug": "watch_dogs-2",
-      "date": "2026-07-06"
-    },
-    {
-      "slug": "nexus-the-jupiter-incident",
-      "date": "2026-07-06"
-    },
-    {
-      "slug": "assassins-creed-odyssey",
-      "date": "2026-07-06"
-    },
-    {
-      "slug": "kenshi",
-      "date": "2026-07-06"
-    },
-    {
-      "slug": "warhammer-40000-rogue-trader",
-      "date": "2026-07-06"
-    },
-    {
       "slug": "doom-the-dark-ages",
       "date": "2026-07-08"
     },
@@ -279,12 +259,33 @@
     {
       "slug": "final-fantasy-vii-rebirth",
       "date": "2026-08-05"
+    },
+    {
+      "slug": "moonlighter",
+      "date": "2026-08-07"
+    },
+    {
+      "slug": "disco-elysium-the-final-cut",
+      "date": "2026-08-07"
+    },
+    {
+      "slug": "tom-clancys-ghost-recon-future-soldier",
+      "date": "2026-08-07"
+    },
+    {
+      "slug": "tom-clancys-ghost-recon-wildlands",
+      "date": "2026-08-07"
+    },
+    {
+      "slug": "dying-light-2-stay-human-reloaded-edition",
+      "date": "2026-08-07"
     }
   ],
   "free_dates": [
     "2026-07-17",
     "2026-07-20",
-    "2026-07-27"
+    "2026-07-27",
+    "2026-08-07"
   ],
   "post_count": 0
 }
