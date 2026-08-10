@@ -1,46 +1,6 @@
 {
   "published": [
     {
-      "slug": "doom-the-dark-ages",
-      "date": "2026-07-08"
-    },
-    {
-      "slug": "resident-evil-2-2019",
-      "date": "2026-07-08"
-    },
-    {
-      "slug": "a-plague-tale-innocence",
-      "date": "2026-07-08"
-    },
-    {
-      "slug": "resident-evil-village",
-      "date": "2026-07-08"
-    },
-    {
-      "slug": "monster-hunter-world",
-      "date": "2026-07-08"
-    },
-    {
-      "slug": "tiny-tinas-wonderlands",
-      "date": "2026-07-10"
-    },
-    {
-      "slug": "what-remains-of-edith-finch",
-      "date": "2026-07-10"
-    },
-    {
-      "slug": "banishers-ghosts-of-new-eden",
-      "date": "2026-07-10"
-    },
-    {
-      "slug": "still-wakes-the-deep",
-      "date": "2026-07-10"
-    },
-    {
-      "slug": "neon-white",
-      "date": "2026-07-10"
-    },
-    {
       "slug": "darkest-dungeon-ii",
       "date": "2026-07-13"
     },
@@ -279,6 +239,26 @@
     {
       "slug": "dying-light-2-stay-human-reloaded-edition",
       "date": "2026-08-07"
+    },
+    {
+      "slug": "tom-clancys-ghost-recon-breakpoint",
+      "date": "2026-08-10"
+    },
+    {
+      "slug": "ender-lilies-quietus-of-the-knights",
+      "date": "2026-08-10"
+    },
+    {
+      "slug": "potion-permit",
+      "date": "2026-08-10"
+    },
+    {
+      "slug": "gloomhaven",
+      "date": "2026-08-10"
+    },
+    {
+      "slug": "superhot",
+      "date": "2026-08-10"
     }
   ],
   "free_dates": [
