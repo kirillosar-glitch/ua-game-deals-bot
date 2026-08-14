@@ -1,26 +1,6 @@
 {
   "published": [
     {
-      "slug": "darkest-dungeon-ii",
-      "date": "2026-07-13"
-    },
-    {
-      "slug": "darkest-dungeon",
-      "date": "2026-07-13"
-    },
-    {
-      "slug": "planet-zoo",
-      "date": "2026-07-13"
-    },
-    {
-      "slug": "high-on-life",
-      "date": "2026-07-13"
-    },
-    {
-      "slug": "totally-accurate-battle-simulator",
-      "date": "2026-07-13"
-    },
-    {
       "slug": "silent-hill-2",
       "date": "2026-07-15"
     },
@@ -279,13 +259,34 @@
     {
       "slug": "persona-3-reload",
       "date": "2026-08-12"
+    },
+    {
+      "slug": "detroit-become-human",
+      "date": "2026-08-14"
+    },
+    {
+      "slug": "heavy-rain",
+      "date": "2026-08-14"
+    },
+    {
+      "slug": "warhammer-40000-rogue-trader",
+      "date": "2026-08-14"
+    },
+    {
+      "slug": "dredge",
+      "date": "2026-08-14"
+    },
+    {
+      "slug": "deponia",
+      "date": "2026-08-14"
     }
   ],
   "free_dates": [
     "2026-07-17",
     "2026-07-20",
     "2026-07-27",
-    "2026-08-07"
+    "2026-08-07",
+    "2026-08-14"
   ],
   "post_count": 0
 }
