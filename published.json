@@ -1,46 +1,6 @@
 {
   "published": [
     {
-      "slug": "silent-hill-2",
-      "date": "2026-07-15"
-    },
-    {
-      "slug": "shadow-of-the-tomb-raider-definitive-edition",
-      "date": "2026-07-15"
-    },
-    {
-      "slug": "the-outlast-trials",
-      "date": "2026-07-15"
-    },
-    {
-      "slug": "marvels-guardians-of-the-galaxy",
-      "date": "2026-07-15"
-    },
-    {
-      "slug": "celeste",
-      "date": "2026-07-15"
-    },
-    {
-      "slug": "catch-me",
-      "date": "2026-07-17"
-    },
-    {
-      "slug": "ashen",
-      "date": "2026-07-17"
-    },
-    {
-      "slug": "system-shock",
-      "date": "2026-07-17"
-    },
-    {
-      "slug": "a-plague-tale-requiem",
-      "date": "2026-07-17"
-    },
-    {
-      "slug": "bayonetta",
-      "date": "2026-07-17"
-    },
-    {
       "slug": "the-life-and-suffering-of-sir-brante",
       "date": "2026-07-20"
     },
@@ -279,10 +239,29 @@
     {
       "slug": "deponia",
       "date": "2026-08-14"
+    },
+    {
+      "slug": "persona-5-royal",
+      "date": "2026-08-17"
+    },
+    {
+      "slug": "the-cosmic-wheel-sisterhood",
+      "date": "2026-08-17"
+    },
+    {
+      "slug": "lost-ruins",
+      "date": "2026-08-17"
+    },
+    {
+      "slug": "xcom-2",
+      "date": "2026-08-17"
+    },
+    {
+      "slug": "total-war-warhammer-iii",
+      "date": "2026-08-17"
     }
   ],
   "free_dates": [
-    "2026-07-17",
     "2026-07-20",
     "2026-07-27",
     "2026-08-07",
