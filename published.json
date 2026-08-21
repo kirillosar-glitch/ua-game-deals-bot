@@ -1,26 +1,6 @@
 {
   "published": [
     {
-      "slug": "the-life-and-suffering-of-sir-brante",
-      "date": "2026-07-20"
-    },
-    {
-      "slug": "shadow-tactics-blades-of-the-shogun",
-      "date": "2026-07-20"
-    },
-    {
-      "slug": "warhammer-40000-darktide",
-      "date": "2026-07-20"
-    },
-    {
-      "slug": "the-wild-eight",
-      "date": "2026-07-20"
-    },
-    {
-      "slug": "songs-of-conquest",
-      "date": "2026-07-20"
-    },
-    {
       "slug": "hades",
       "date": "2026-07-22"
     },
@@ -279,10 +259,29 @@
     {
       "slug": "carrion",
       "date": "2026-08-19"
+    },
+    {
+      "slug": "crusader-kings-iii",
+      "date": "2026-08-21"
+    },
+    {
+      "slug": "risk-of-rain-2",
+      "date": "2026-08-21"
+    },
+    {
+      "slug": "sonic-racing-crossworlds",
+      "date": "2026-08-21"
+    },
+    {
+      "slug": "sonic-x-shadow-generations",
+      "date": "2026-08-21"
+    },
+    {
+      "slug": "bayonetta",
+      "date": "2026-08-21"
     }
   ],
   "free_dates": [
-    "2026-07-20",
     "2026-07-27",
     "2026-08-07",
     "2026-08-14"
