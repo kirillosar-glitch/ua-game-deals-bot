@@ -1,46 +1,6 @@
 {
   "published": [
     {
-      "slug": "hades",
-      "date": "2026-07-22"
-    },
-    {
-      "slug": "resident-evil-3-2020",
-      "date": "2026-07-22"
-    },
-    {
-      "slug": "everspace-2",
-      "date": "2026-07-22"
-    },
-    {
-      "slug": "greedfall",
-      "date": "2026-07-22"
-    },
-    {
-      "slug": "resident-evil-7-biohazard",
-      "date": "2026-07-22"
-    },
-    {
-      "slug": "shadows-of-doubt",
-      "date": "2026-07-24"
-    },
-    {
-      "slug": "foretales",
-      "date": "2026-07-24"
-    },
-    {
-      "slug": "superliminal",
-      "date": "2026-07-24"
-    },
-    {
-      "slug": "green-hell",
-      "date": "2026-07-24"
-    },
-    {
-      "slug": "frostpunk",
-      "date": "2026-07-24"
-    },
-    {
       "slug": "yet-another-zombie-defense-hd",
       "date": "2026-07-27"
     },
@@ -279,6 +239,26 @@
     {
       "slug": "bayonetta",
       "date": "2026-08-21"
+    },
+    {
+      "slug": "lords-of-the-fallen",
+      "date": "2026-08-24"
+    },
+    {
+      "slug": "still-wakes-the-deep",
+      "date": "2026-08-24"
+    },
+    {
+      "slug": "blasphemous-2",
+      "date": "2026-08-24"
+    },
+    {
+      "slug": "hell-is-us",
+      "date": "2026-08-24"
+    },
+    {
+      "slug": "have-a-nice-death",
+      "date": "2026-08-24"
     }
   ],
   "free_dates": [
