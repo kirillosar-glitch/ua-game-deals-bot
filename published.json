@@ -259,12 +259,33 @@
     {
       "slug": "have-a-nice-death",
       "date": "2026-08-24"
+    },
+    {
+      "slug": "red-dead-redemption-2",
+      "date": "2026-08-26"
+    },
+    {
+      "slug": "dokimon-quest",
+      "date": "2026-08-26"
+    },
+    {
+      "slug": "devil-may-cry-5-and-vergil",
+      "date": "2026-08-26"
+    },
+    {
+      "slug": "what-remains-of-edith-finch",
+      "date": "2026-08-26"
+    },
+    {
+      "slug": "dead-by-daylight",
+      "date": "2026-08-26"
     }
   ],
   "free_dates": [
     "2026-07-27",
     "2026-08-07",
-    "2026-08-14"
+    "2026-08-14",
+    "2026-08-26"
   ],
   "post_count": 0
 }
