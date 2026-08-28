@@ -1,26 +1,6 @@
 {
   "published": [
     {
-      "slug": "yet-another-zombie-defense-hd",
-      "date": "2026-07-27"
-    },
-    {
-      "slug": "metal-gear-solid-d-snake-eater",
-      "date": "2026-07-27"
-    },
-    {
-      "slug": "dragons-dogma-dark-arisen",
-      "date": "2026-07-27"
-    },
-    {
-      "slug": "sid-meiers-civilization-vi",
-      "date": "2026-07-27"
-    },
-    {
-      "slug": "inscryption",
-      "date": "2026-07-27"
-    },
-    {
       "slug": "lego-star-wars-the-skywalker-saga",
       "date": "2026-07-29"
     },
@@ -279,10 +259,29 @@
     {
       "slug": "dead-by-daylight",
       "date": "2026-08-26"
+    },
+    {
+      "slug": "rival-stars-horse-racing-desktop-edition",
+      "date": "2026-08-28"
+    },
+    {
+      "slug": "hogwarts-legacy",
+      "date": "2026-08-28"
+    },
+    {
+      "slug": "breathedge",
+      "date": "2026-08-28"
+    },
+    {
+      "slug": "control-ultimate-edition",
+      "date": "2026-08-28"
+    },
+    {
+      "slug": "kenshi",
+      "date": "2026-08-28"
     }
   ],
   "free_dates": [
-    "2026-07-27",
     "2026-08-07",
     "2026-08-14",
     "2026-08-26"
