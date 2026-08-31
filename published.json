@@ -1,46 +1,6 @@
 {
   "published": [
     {
-      "slug": "lego-star-wars-the-skywalker-saga",
-      "date": "2026-07-29"
-    },
-    {
-      "slug": "nioh-complete-edition",
-      "date": "2026-07-29"
-    },
-    {
-      "slug": "another-crabs-treasure",
-      "date": "2026-07-29"
-    },
-    {
-      "slug": "nioh-2-the-complete-edition",
-      "date": "2026-07-29"
-    },
-    {
-      "slug": "thymesia",
-      "date": "2026-07-29"
-    },
-    {
-      "slug": "marvels-spider-man-remastered",
-      "date": "2026-07-31"
-    },
-    {
-      "slug": "marvels-spider-man-miles-morales",
-      "date": "2026-07-31"
-    },
-    {
-      "slug": "doom-eternal",
-      "date": "2026-07-31"
-    },
-    {
-      "slug": "the-elder-scrolls-v-skyrim-special-edition",
-      "date": "2026-07-31"
-    },
-    {
-      "slug": "fallout-4",
-      "date": "2026-07-31"
-    },
-    {
       "slug": "cyberpunk-2077",
       "date": "2026-08-03"
     },
@@ -279,6 +239,26 @@
     {
       "slug": "kenshi",
       "date": "2026-08-28"
+    },
+    {
+      "slug": "tiny-tinas-wonderlands",
+      "date": "2026-08-31"
+    },
+    {
+      "slug": "against-the-storm",
+      "date": "2026-08-31"
+    },
+    {
+      "slug": "shadow-tactics-blades-of-the-shogun",
+      "date": "2026-08-31"
+    },
+    {
+      "slug": "mega-man-11",
+      "date": "2026-08-31"
+    },
+    {
+      "slug": "workers-and-resources-soviet-republic",
+      "date": "2026-08-31"
     }
   ],
   "free_dates": [
