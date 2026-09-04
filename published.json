@@ -1,26 +1,6 @@
 {
   "published": [
     {
-      "slug": "cyberpunk-2077",
-      "date": "2026-08-03"
-    },
-    {
-      "slug": "resident-evil-4-2023",
-      "date": "2026-08-03"
-    },
-    {
-      "slug": "robocop-rogue-city",
-      "date": "2026-08-03"
-    },
-    {
-      "slug": "borderlands-3",
-      "date": "2026-08-03"
-    },
-    {
-      "slug": "the-invincible",
-      "date": "2026-08-03"
-    },
-    {
       "slug": "nier-automata-game-of-the-yorha-edition",
       "date": "2026-08-05"
     },
@@ -279,6 +259,26 @@
     {
       "slug": "everspace-2",
       "date": "2026-09-02"
+    },
+    {
+      "slug": "warhammer-40000-space-marine-2",
+      "date": "2026-09-04"
+    },
+    {
+      "slug": "alone-with-you",
+      "date": "2026-09-04"
+    },
+    {
+      "slug": "astroneer",
+      "date": "2026-09-04"
+    },
+    {
+      "slug": "rain-world",
+      "date": "2026-09-04"
+    },
+    {
+      "slug": "sid-meiers-civilization-vi",
+      "date": "2026-09-04"
     }
   ],
   "free_dates": [
