@@ -1,46 +1,6 @@
 {
   "published": [
     {
-      "slug": "nier-automata-game-of-the-yorha-edition",
-      "date": "2026-08-05"
-    },
-    {
-      "slug": "divinity-original-sin-2-definitive-edition",
-      "date": "2026-08-05"
-    },
-    {
-      "slug": "final-fantasy-vii-remake-intergrade",
-      "date": "2026-08-05"
-    },
-    {
-      "slug": "nier-replicant-ver-1-22474487139",
-      "date": "2026-08-05"
-    },
-    {
-      "slug": "final-fantasy-vii-rebirth",
-      "date": "2026-08-05"
-    },
-    {
-      "slug": "moonlighter",
-      "date": "2026-08-07"
-    },
-    {
-      "slug": "disco-elysium-the-final-cut",
-      "date": "2026-08-07"
-    },
-    {
-      "slug": "tom-clancys-ghost-recon-future-soldier",
-      "date": "2026-08-07"
-    },
-    {
-      "slug": "tom-clancys-ghost-recon-wildlands",
-      "date": "2026-08-07"
-    },
-    {
-      "slug": "dying-light-2-stay-human-reloaded-edition",
-      "date": "2026-08-07"
-    },
-    {
       "slug": "tom-clancys-ghost-recon-breakpoint",
       "date": "2026-08-10"
     },
@@ -279,10 +239,29 @@
     {
       "slug": "sid-meiers-civilization-vi",
       "date": "2026-09-04"
+    },
+    {
+      "slug": "atomic-heart",
+      "date": "2026-09-07"
+    },
+    {
+      "slug": "into-the-breach",
+      "date": "2026-09-07"
+    },
+    {
+      "slug": "gtfo",
+      "date": "2026-09-07"
+    },
+    {
+      "slug": "slay-the-spire",
+      "date": "2026-09-07"
+    },
+    {
+      "slug": "vampyr",
+      "date": "2026-09-07"
     }
   ],
   "free_dates": [
-    "2026-08-07",
     "2026-08-14",
     "2026-08-26"
   ],
