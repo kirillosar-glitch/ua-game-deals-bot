@@ -1,26 +1,6 @@
 {
   "published": [
     {
-      "slug": "tom-clancys-ghost-recon-breakpoint",
-      "date": "2026-08-10"
-    },
-    {
-      "slug": "ender-lilies-quietus-of-the-knights",
-      "date": "2026-08-10"
-    },
-    {
-      "slug": "potion-permit",
-      "date": "2026-08-10"
-    },
-    {
-      "slug": "gloomhaven",
-      "date": "2026-08-10"
-    },
-    {
-      "slug": "superhot",
-      "date": "2026-08-10"
-    },
-    {
       "slug": "cult-of-the-lamb",
       "date": "2026-08-12"
     },
@@ -279,6 +259,26 @@
     {
       "slug": "resident-evil-4-2023",
       "date": "2026-09-09"
+    },
+    {
+      "slug": "death-stranding-directors-cut",
+      "date": "2026-09-11"
+    },
+    {
+      "slug": "diablo-iv",
+      "date": "2026-09-11"
+    },
+    {
+      "slug": "bloodstained-ritual-of-the-night",
+      "date": "2026-09-11"
+    },
+    {
+      "slug": "solasta-crown-of-the-magister",
+      "date": "2026-09-11"
+    },
+    {
+      "slug": "ghostrunner",
+      "date": "2026-09-11"
     }
   ],
   "free_dates": [
