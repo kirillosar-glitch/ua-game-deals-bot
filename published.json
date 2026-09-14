@@ -1,46 +1,6 @@
 {
   "published": [
     {
-      "slug": "cult-of-the-lamb",
-      "date": "2026-08-12"
-    },
-    {
-      "slug": "metaphor-refantazio",
-      "date": "2026-08-12"
-    },
-    {
-      "slug": "doom-the-dark-ages",
-      "date": "2026-08-12"
-    },
-    {
-      "slug": "beyond-two-souls",
-      "date": "2026-08-12"
-    },
-    {
-      "slug": "persona-3-reload",
-      "date": "2026-08-12"
-    },
-    {
-      "slug": "detroit-become-human",
-      "date": "2026-08-14"
-    },
-    {
-      "slug": "heavy-rain",
-      "date": "2026-08-14"
-    },
-    {
-      "slug": "warhammer-40000-rogue-trader",
-      "date": "2026-08-14"
-    },
-    {
-      "slug": "dredge",
-      "date": "2026-08-14"
-    },
-    {
-      "slug": "deponia",
-      "date": "2026-08-14"
-    },
-    {
       "slug": "persona-5-royal",
       "date": "2026-08-17"
     },
@@ -279,10 +239,29 @@
     {
       "slug": "ghostrunner",
       "date": "2026-09-11"
+    },
+    {
+      "slug": "resident-evil-2-2019",
+      "date": "2026-09-14"
+    },
+    {
+      "slug": "resident-evil-village",
+      "date": "2026-09-14"
+    },
+    {
+      "slug": "resident-evil-3-2020",
+      "date": "2026-09-14"
+    },
+    {
+      "slug": "dragons-dogma-dark-arisen",
+      "date": "2026-09-14"
+    },
+    {
+      "slug": "children-of-morta",
+      "date": "2026-09-14"
     }
   ],
   "free_dates": [
-    "2026-08-14",
     "2026-08-26"
   ],
   "post_count": 0
