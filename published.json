@@ -259,10 +259,31 @@
     {
       "slug": "children-of-morta",
       "date": "2026-09-14"
+    },
+    {
+      "slug": "crystal-crisis",
+      "date": "2026-09-16"
+    },
+    {
+      "slug": "divinity-original-sin-2-definitive-edition",
+      "date": "2026-09-16"
+    },
+    {
+      "slug": "nioh-complete-edition",
+      "date": "2026-09-16"
+    },
+    {
+      "slug": "star-wars-jedi-survivor",
+      "date": "2026-09-16"
+    },
+    {
+      "slug": "half-life-alyx",
+      "date": "2026-09-16"
     }
   ],
   "free_dates": [
-    "2026-08-26"
+    "2026-08-26",
+    "2026-09-16"
   ],
   "post_count": 0
 }
