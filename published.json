@@ -1,26 +1,6 @@
 {
   "published": [
     {
-      "slug": "persona-5-royal",
-      "date": "2026-08-17"
-    },
-    {
-      "slug": "the-cosmic-wheel-sisterhood",
-      "date": "2026-08-17"
-    },
-    {
-      "slug": "lost-ruins",
-      "date": "2026-08-17"
-    },
-    {
-      "slug": "xcom-2",
-      "date": "2026-08-17"
-    },
-    {
-      "slug": "total-war-warhammer-iii",
-      "date": "2026-08-17"
-    },
-    {
       "slug": "kingdom-come-deliverance-ii",
       "date": "2026-08-19"
     },
@@ -279,11 +259,32 @@
     {
       "slug": "half-life-alyx",
       "date": "2026-09-16"
+    },
+    {
+      "slug": "space-menace",
+      "date": "2026-09-18"
+    },
+    {
+      "slug": "far-cry-6",
+      "date": "2026-09-18"
+    },
+    {
+      "slug": "for-honor",
+      "date": "2026-09-18"
+    },
+    {
+      "slug": "resident-evil-7-biohazard",
+      "date": "2026-09-18"
+    },
+    {
+      "slug": "watch_dogs-2",
+      "date": "2026-09-18"
     }
   ],
   "free_dates": [
     "2026-08-26",
-    "2026-09-16"
+    "2026-09-16",
+    "2026-09-18"
   ],
   "post_count": 0
 }
