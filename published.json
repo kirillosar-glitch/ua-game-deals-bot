@@ -1,46 +1,6 @@
 {
   "published": [
     {
-      "slug": "kingdom-come-deliverance-ii",
-      "date": "2026-08-19"
-    },
-    {
-      "slug": "darkest-dungeon",
-      "date": "2026-08-19"
-    },
-    {
-      "slug": "indika",
-      "date": "2026-08-19"
-    },
-    {
-      "slug": "darkest-dungeon-ii",
-      "date": "2026-08-19"
-    },
-    {
-      "slug": "carrion",
-      "date": "2026-08-19"
-    },
-    {
-      "slug": "crusader-kings-iii",
-      "date": "2026-08-21"
-    },
-    {
-      "slug": "risk-of-rain-2",
-      "date": "2026-08-21"
-    },
-    {
-      "slug": "sonic-racing-crossworlds",
-      "date": "2026-08-21"
-    },
-    {
-      "slug": "sonic-x-shadow-generations",
-      "date": "2026-08-21"
-    },
-    {
-      "slug": "bayonetta",
-      "date": "2026-08-21"
-    },
-    {
       "slug": "lords-of-the-fallen",
       "date": "2026-08-24"
     },
@@ -279,6 +239,26 @@
     {
       "slug": "watch_dogs-2",
       "date": "2026-09-18"
+    },
+    {
+      "slug": "final-fantasy-vii-remake-intergrade",
+      "date": "2026-09-21"
+    },
+    {
+      "slug": "kerbal-space-program",
+      "date": "2026-09-21"
+    },
+    {
+      "slug": "borderlands-3",
+      "date": "2026-09-21"
+    },
+    {
+      "slug": "the-medium",
+      "date": "2026-09-21"
+    },
+    {
+      "slug": "planet-coaster",
+      "date": "2026-09-21"
     }
   ],
   "free_dates": [
