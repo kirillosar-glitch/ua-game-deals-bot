@@ -1,46 +1,6 @@
 {
   "published": [
     {
-      "slug": "red-dead-redemption-2",
-      "date": "2026-08-26"
-    },
-    {
-      "slug": "dokimon-quest",
-      "date": "2026-08-26"
-    },
-    {
-      "slug": "devil-may-cry-5-and-vergil",
-      "date": "2026-08-26"
-    },
-    {
-      "slug": "what-remains-of-edith-finch",
-      "date": "2026-08-26"
-    },
-    {
-      "slug": "dead-by-daylight",
-      "date": "2026-08-26"
-    },
-    {
-      "slug": "rival-stars-horse-racing-desktop-edition",
-      "date": "2026-08-28"
-    },
-    {
-      "slug": "hogwarts-legacy",
-      "date": "2026-08-28"
-    },
-    {
-      "slug": "breathedge",
-      "date": "2026-08-28"
-    },
-    {
-      "slug": "control-ultimate-edition",
-      "date": "2026-08-28"
-    },
-    {
-      "slug": "kenshi",
-      "date": "2026-08-28"
-    },
-    {
       "slug": "tiny-tinas-wonderlands",
       "date": "2026-08-31"
     },
@@ -279,10 +239,29 @@
     {
       "slug": "castlevania-advance-collection",
       "date": "2026-09-25"
+    },
+    {
+      "slug": "metaphor-refantazio",
+      "date": "2026-09-28"
+    },
+    {
+      "slug": "code-vein",
+      "date": "2026-09-28"
+    },
+    {
+      "slug": "persona-5-royal",
+      "date": "2026-09-28"
+    },
+    {
+      "slug": "hades",
+      "date": "2026-09-28"
+    },
+    {
+      "slug": "jagged-alliance-3",
+      "date": "2026-09-28"
     }
   ],
   "free_dates": [
-    "2026-08-26",
     "2026-09-16",
     "2026-09-18"
   ],
