@@ -1,46 +1,6 @@
 {
   "published": [
     {
-      "slug": "silent-hill-2",
-      "date": "2026-09-02"
-    },
-    {
-      "slug": "pacific-drive",
-      "date": "2026-09-02"
-    },
-    {
-      "slug": "subnautica",
-      "date": "2026-09-02"
-    },
-    {
-      "slug": "shadow-of-the-tomb-raider-definitive-edition",
-      "date": "2026-09-02"
-    },
-    {
-      "slug": "everspace-2",
-      "date": "2026-09-02"
-    },
-    {
-      "slug": "warhammer-40000-space-marine-2",
-      "date": "2026-09-04"
-    },
-    {
-      "slug": "alone-with-you",
-      "date": "2026-09-04"
-    },
-    {
-      "slug": "astroneer",
-      "date": "2026-09-04"
-    },
-    {
-      "slug": "rain-world",
-      "date": "2026-09-04"
-    },
-    {
-      "slug": "sid-meiers-civilization-vi",
-      "date": "2026-09-04"
-    },
-    {
       "slug": "atomic-heart",
       "date": "2026-09-07"
     },
@@ -279,6 +239,26 @@
     {
       "slug": "hogwarts-legacy",
       "date": "2026-10-02"
+    },
+    {
+      "slug": "marvels-spider-man-miles-morales",
+      "date": "2026-10-05"
+    },
+    {
+      "slug": "the-elder-scrolls-v-skyrim-special-edition",
+      "date": "2026-10-05"
+    },
+    {
+      "slug": "returnal",
+      "date": "2026-10-05"
+    },
+    {
+      "slug": "deaths-door",
+      "date": "2026-10-05"
+    },
+    {
+      "slug": "the-talos-principle-2",
+      "date": "2026-10-05"
     }
   ],
   "free_dates": [
