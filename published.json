@@ -1,26 +1,6 @@
 {
   "published": [
     {
-      "slug": "atomic-heart",
-      "date": "2026-09-07"
-    },
-    {
-      "slug": "into-the-breach",
-      "date": "2026-09-07"
-    },
-    {
-      "slug": "gtfo",
-      "date": "2026-09-07"
-    },
-    {
-      "slug": "slay-the-spire",
-      "date": "2026-09-07"
-    },
-    {
-      "slug": "vampyr",
-      "date": "2026-09-07"
-    },
-    {
       "slug": "no-mans-sky",
       "date": "2026-09-09"
     },
@@ -279,11 +259,32 @@
     {
       "slug": "robocop-rogue-city",
       "date": "2026-10-07"
+    },
+    {
+      "slug": "pony-island",
+      "date": "2026-10-09"
+    },
+    {
+      "slug": "risk-of-rain-2",
+      "date": "2026-10-09"
+    },
+    {
+      "slug": "like-a-dragon-pirate-yakuza-in-hawaii",
+      "date": "2026-10-09"
+    },
+    {
+      "slug": "yakuza-like-a-dragon",
+      "date": "2026-10-09"
+    },
+    {
+      "slug": "like-a-dragon-infinite-wealth",
+      "date": "2026-10-09"
     }
   ],
   "free_dates": [
     "2026-09-16",
-    "2026-09-18"
+    "2026-09-18",
+    "2026-10-09"
   ],
   "post_count": 0
 }
