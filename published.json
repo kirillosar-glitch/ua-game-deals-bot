@@ -1,46 +1,6 @@
 {
   "published": [
     {
-      "slug": "no-mans-sky",
-      "date": "2026-09-09"
-    },
-    {
-      "slug": "deep-rock-galactic",
-      "date": "2026-09-09"
-    },
-    {
-      "slug": "monster-hunter-world",
-      "date": "2026-09-09"
-    },
-    {
-      "slug": "the-forgotten-city",
-      "date": "2026-09-09"
-    },
-    {
-      "slug": "resident-evil-4-2023",
-      "date": "2026-09-09"
-    },
-    {
-      "slug": "death-stranding-directors-cut",
-      "date": "2026-09-11"
-    },
-    {
-      "slug": "diablo-iv",
-      "date": "2026-09-11"
-    },
-    {
-      "slug": "bloodstained-ritual-of-the-night",
-      "date": "2026-09-11"
-    },
-    {
-      "slug": "solasta-crown-of-the-magister",
-      "date": "2026-09-11"
-    },
-    {
-      "slug": "ghostrunner",
-      "date": "2026-09-11"
-    },
-    {
       "slug": "resident-evil-2-2019",
       "date": "2026-09-14"
     },
@@ -279,6 +239,26 @@
     {
       "slug": "like-a-dragon-infinite-wealth",
       "date": "2026-10-09"
+    },
+    {
+      "slug": "fireside-feelings",
+      "date": "2026-10-12"
+    },
+    {
+      "slug": "astroneer",
+      "date": "2026-10-12"
+    },
+    {
+      "slug": "darkest-dungeon-ii",
+      "date": "2026-10-12"
+    },
+    {
+      "slug": "enter-the-gungeon",
+      "date": "2026-10-12"
+    },
+    {
+      "slug": "breathedge",
+      "date": "2026-10-12"
     }
   ],
   "free_dates": [
