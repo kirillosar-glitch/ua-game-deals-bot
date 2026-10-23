@@ -1,26 +1,6 @@
 {
   "published": [
     {
-      "slug": "final-fantasy-vii-remake-intergrade",
-      "date": "2026-09-21"
-    },
-    {
-      "slug": "kerbal-space-program",
-      "date": "2026-09-21"
-    },
-    {
-      "slug": "borderlands-3",
-      "date": "2026-09-21"
-    },
-    {
-      "slug": "the-medium",
-      "date": "2026-09-21"
-    },
-    {
-      "slug": "planet-coaster",
-      "date": "2026-09-21"
-    },
-    {
       "slug": "disco-elysium-the-final-cut",
       "date": "2026-09-23"
     },
@@ -279,6 +259,26 @@
     {
       "slug": "fabledom",
       "date": "2026-10-21"
+    },
+    {
+      "slug": "resident-evil-4-2023",
+      "date": "2026-10-23"
+    },
+    {
+      "slug": "resident-evil-village",
+      "date": "2026-10-23"
+    },
+    {
+      "slug": "resident-evil-2-2019",
+      "date": "2026-10-23"
+    },
+    {
+      "slug": "resident-evil-3-2020",
+      "date": "2026-10-23"
+    },
+    {
+      "slug": "resident-evil-7-biohazard",
+      "date": "2026-10-23"
     }
   ],
   "free_dates": [
