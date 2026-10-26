@@ -1,46 +1,6 @@
 {
   "published": [
     {
-      "slug": "disco-elysium-the-final-cut",
-      "date": "2026-09-23"
-    },
-    {
-      "slug": "detroit-become-human",
-      "date": "2026-09-23"
-    },
-    {
-      "slug": "ender-lilies-quietus-of-the-knights",
-      "date": "2026-09-23"
-    },
-    {
-      "slug": "final-fantasy-vii-rebirth",
-      "date": "2026-09-23"
-    },
-    {
-      "slug": "potion-craft-alchemist-simulator",
-      "date": "2026-09-23"
-    },
-    {
-      "slug": "ori-and-the-will-of-the-wisps",
-      "date": "2026-09-25"
-    },
-    {
-      "slug": "warhammer-40000-rogue-trader",
-      "date": "2026-09-25"
-    },
-    {
-      "slug": "kingdom-come-deliverance-ii",
-      "date": "2026-09-25"
-    },
-    {
-      "slug": "persona-3-reload",
-      "date": "2026-09-25"
-    },
-    {
-      "slug": "castlevania-advance-collection",
-      "date": "2026-09-25"
-    },
-    {
       "slug": "metaphor-refantazio",
       "date": "2026-09-28"
     },
@@ -279,6 +239,26 @@
     {
       "slug": "resident-evil-7-biohazard",
       "date": "2026-10-23"
+    },
+    {
+      "slug": "sker-ritual",
+      "date": "2026-10-26"
+    },
+    {
+      "slug": "dredge",
+      "date": "2026-10-26"
+    },
+    {
+      "slug": "little-nightmares-ii",
+      "date": "2026-10-26"
+    },
+    {
+      "slug": "ni-no-kuni-ii-revenant-kingdom",
+      "date": "2026-10-26"
+    },
+    {
+      "slug": "shadow-of-the-tomb-raider-definitive-edition",
+      "date": "2026-10-26"
     }
   ],
   "free_dates": [
