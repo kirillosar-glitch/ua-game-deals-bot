@@ -1,26 +1,6 @@
 {
   "published": [
     {
-      "slug": "metaphor-refantazio",
-      "date": "2026-09-28"
-    },
-    {
-      "slug": "code-vein",
-      "date": "2026-09-28"
-    },
-    {
-      "slug": "persona-5-royal",
-      "date": "2026-09-28"
-    },
-    {
-      "slug": "hades",
-      "date": "2026-09-28"
-    },
-    {
-      "slug": "jagged-alliance-3",
-      "date": "2026-09-28"
-    },
-    {
       "slug": "metro-exodus",
       "date": "2026-09-30"
     },
@@ -279,10 +259,31 @@
     {
       "slug": "a-plague-tale-requiem",
       "date": "2026-10-28"
+    },
+    {
+      "slug": "hexologic",
+      "date": "2026-10-30"
+    },
+    {
+      "slug": "resident-evil-hd-remaster",
+      "date": "2026-10-30"
+    },
+    {
+      "slug": "resident-evil-0-hd-remaster",
+      "date": "2026-10-30"
+    },
+    {
+      "slug": "resident-evil-4-2005",
+      "date": "2026-10-30"
+    },
+    {
+      "slug": "slay-the-princess-the-pristine-cut",
+      "date": "2026-10-30"
     }
   ],
   "free_dates": [
-    "2026-10-09"
+    "2026-10-09",
+    "2026-10-30"
   ],
   "post_count": 0
 }
