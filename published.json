@@ -1,46 +1,6 @@
 {
   "published": [
     {
-      "slug": "metro-exodus",
-      "date": "2026-09-30"
-    },
-    {
-      "slug": "cloudpunk",
-      "date": "2026-09-30"
-    },
-    {
-      "slug": "pathfinder-wrath-of-the-righteous-enhanced-edition",
-      "date": "2026-09-30"
-    },
-    {
-      "slug": "lords-of-the-fallen",
-      "date": "2026-09-30"
-    },
-    {
-      "slug": "planet-zoo",
-      "date": "2026-09-30"
-    },
-    {
-      "slug": "god-of-war",
-      "date": "2026-10-02"
-    },
-    {
-      "slug": "marvels-spider-man-remastered",
-      "date": "2026-10-02"
-    },
-    {
-      "slug": "cyberpunk-2077",
-      "date": "2026-10-02"
-    },
-    {
-      "slug": "uncharted-legacy-of-thieves-collection",
-      "date": "2026-10-02"
-    },
-    {
-      "slug": "hogwarts-legacy",
-      "date": "2026-10-02"
-    },
-    {
       "slug": "marvels-spider-man-miles-morales",
       "date": "2026-10-05"
     },
@@ -279,6 +239,26 @@
     {
       "slug": "slay-the-princess-the-pristine-cut",
       "date": "2026-10-30"
+    },
+    {
+      "slug": "lords-of-the-fallen",
+      "date": "2026-11-02"
+    },
+    {
+      "slug": "the-invincible",
+      "date": "2026-11-02"
+    },
+    {
+      "slug": "owlboy",
+      "date": "2026-11-02"
+    },
+    {
+      "slug": "the-thaumaturge",
+      "date": "2026-11-02"
+    },
+    {
+      "slug": "borderlands-3",
+      "date": "2026-11-02"
     }
   ],
   "free_dates": [
