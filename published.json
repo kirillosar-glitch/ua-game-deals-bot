@@ -1,26 +1,6 @@
 {
   "published": [
     {
-      "slug": "marvels-spider-man-miles-morales",
-      "date": "2026-10-05"
-    },
-    {
-      "slug": "the-elder-scrolls-v-skyrim-special-edition",
-      "date": "2026-10-05"
-    },
-    {
-      "slug": "returnal",
-      "date": "2026-10-05"
-    },
-    {
-      "slug": "deaths-door",
-      "date": "2026-10-05"
-    },
-    {
-      "slug": "the-talos-principle-2",
-      "date": "2026-10-05"
-    },
-    {
       "slug": "hell-is-us",
       "date": "2026-10-07"
     },
@@ -279,6 +259,26 @@
     {
       "slug": "frostpunk",
       "date": "2026-11-04"
+    },
+    {
+      "slug": "payday-3",
+      "date": "2026-11-06"
+    },
+    {
+      "slug": "spiritfarer-farewell-edition",
+      "date": "2026-11-06"
+    },
+    {
+      "slug": "dying-light-2-stay-human-reloaded-edition",
+      "date": "2026-11-06"
+    },
+    {
+      "slug": "teenage-mutant-ninja-turtles-shredders-revenge",
+      "date": "2026-11-06"
+    },
+    {
+      "slug": "for-the-king",
+      "date": "2026-11-06"
     }
   ],
   "free_dates": [
