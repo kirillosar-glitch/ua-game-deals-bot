@@ -1,46 +1,6 @@
 {
   "published": [
     {
-      "slug": "hell-is-us",
-      "date": "2026-10-07"
-    },
-    {
-      "slug": "cataclismo",
-      "date": "2026-10-07"
-    },
-    {
-      "slug": "lego-star-wars-the-skywalker-saga",
-      "date": "2026-10-07"
-    },
-    {
-      "slug": "pacific-drive",
-      "date": "2026-10-07"
-    },
-    {
-      "slug": "robocop-rogue-city",
-      "date": "2026-10-07"
-    },
-    {
-      "slug": "pony-island",
-      "date": "2026-10-09"
-    },
-    {
-      "slug": "risk-of-rain-2",
-      "date": "2026-10-09"
-    },
-    {
-      "slug": "like-a-dragon-pirate-yakuza-in-hawaii",
-      "date": "2026-10-09"
-    },
-    {
-      "slug": "yakuza-like-a-dragon",
-      "date": "2026-10-09"
-    },
-    {
-      "slug": "like-a-dragon-infinite-wealth",
-      "date": "2026-10-09"
-    },
-    {
       "slug": "fireside-feelings",
       "date": "2026-10-12"
     },
@@ -279,10 +239,29 @@
     {
       "slug": "for-the-king",
       "date": "2026-11-06"
+    },
+    {
+      "slug": "tiny-tinas-wonderlands",
+      "date": "2026-11-09"
+    },
+    {
+      "slug": "thymesia",
+      "date": "2026-11-09"
+    },
+    {
+      "slug": "ender-lilies-quietus-of-the-knights",
+      "date": "2026-11-09"
+    },
+    {
+      "slug": "children-of-morta",
+      "date": "2026-11-09"
+    },
+    {
+      "slug": "borderlands-2",
+      "date": "2026-11-09"
     }
   ],
   "free_dates": [
-    "2026-10-09",
     "2026-10-30"
   ],
   "post_count": 0
