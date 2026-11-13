@@ -1,26 +1,6 @@
 {
   "published": [
     {
-      "slug": "fireside-feelings",
-      "date": "2026-10-12"
-    },
-    {
-      "slug": "astroneer",
-      "date": "2026-10-12"
-    },
-    {
-      "slug": "darkest-dungeon-ii",
-      "date": "2026-10-12"
-    },
-    {
-      "slug": "enter-the-gungeon",
-      "date": "2026-10-12"
-    },
-    {
-      "slug": "breathedge",
-      "date": "2026-10-12"
-    },
-    {
       "slug": "fallout-4",
       "date": "2026-10-14"
     },
@@ -279,6 +259,26 @@
     {
       "slug": "mortal-kombat-legacy-kollection",
       "date": "2026-11-11"
+    },
+    {
+      "slug": "the-elder-scrolls-v-skyrim-special-edition",
+      "date": "2026-11-13"
+    },
+    {
+      "slug": "far-cry-4",
+      "date": "2026-11-13"
+    },
+    {
+      "slug": "hearts-of-iron-iv",
+      "date": "2026-11-13"
+    },
+    {
+      "slug": "cloudpunk",
+      "date": "2026-11-13"
+    },
+    {
+      "slug": "borderlands-the-pre-sequel",
+      "date": "2026-11-13"
     }
   ],
   "free_dates": [
