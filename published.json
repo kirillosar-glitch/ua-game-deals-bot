@@ -1,46 +1,6 @@
 {
   "published": [
     {
-      "slug": "fallout-4",
-      "date": "2026-10-14"
-    },
-    {
-      "slug": "noita",
-      "date": "2026-10-14"
-    },
-    {
-      "slug": "fallout-3-game-of-the-year-edition",
-      "date": "2026-10-14"
-    },
-    {
-      "slug": "red-dead-redemption-2",
-      "date": "2026-10-14"
-    },
-    {
-      "slug": "battlefield-6",
-      "date": "2026-10-14"
-    },
-    {
-      "slug": "bad-cheese",
-      "date": "2026-10-16"
-    },
-    {
-      "slug": "street-fighter-6",
-      "date": "2026-10-16"
-    },
-    {
-      "slug": "superliminal",
-      "date": "2026-10-16"
-    },
-    {
-      "slug": "blasphemous-2",
-      "date": "2026-10-16"
-    },
-    {
-      "slug": "marvel-vs-capcom-fighting-collection-arcade-classics",
-      "date": "2026-10-16"
-    },
-    {
       "slug": "darkest-dungeon",
       "date": "2026-10-19"
     },
@@ -279,6 +239,26 @@
     {
       "slug": "borderlands-the-pre-sequel",
       "date": "2026-11-13"
+    },
+    {
+      "slug": "kingdom-come-deliverance-ii",
+      "date": "2026-11-16"
+    },
+    {
+      "slug": "persona-3-reload",
+      "date": "2026-11-16"
+    },
+    {
+      "slug": "kingdom-come-deliverance",
+      "date": "2026-11-16"
+    },
+    {
+      "slug": "sifu",
+      "date": "2026-11-16"
+    },
+    {
+      "slug": "persona-5-royal",
+      "date": "2026-11-16"
     }
   ],
   "free_dates": [
