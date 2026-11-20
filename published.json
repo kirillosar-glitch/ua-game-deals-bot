@@ -1,26 +1,6 @@
 {
   "published": [
     {
-      "slug": "darkest-dungeon",
-      "date": "2026-10-19"
-    },
-    {
-      "slug": "the-forgotten-city",
-      "date": "2026-10-19"
-    },
-    {
-      "slug": "undertale",
-      "date": "2026-10-19"
-    },
-    {
-      "slug": "warhammer-40000-space-marine-2",
-      "date": "2026-10-19"
-    },
-    {
-      "slug": "devil-may-cry-4-special-edition",
-      "date": "2026-10-19"
-    },
-    {
       "slug": "dead-by-daylight",
       "date": "2026-10-21"
     },
@@ -279,6 +259,26 @@
     {
       "slug": "nioh-complete-edition",
       "date": "2026-11-18"
+    },
+    {
+      "slug": "god-of-war",
+      "date": "2026-11-20"
+    },
+    {
+      "slug": "marvels-spider-man-remastered",
+      "date": "2026-11-20"
+    },
+    {
+      "slug": "uncharted-legacy-of-thieves-collection",
+      "date": "2026-11-20"
+    },
+    {
+      "slug": "marvels-spider-man-miles-morales",
+      "date": "2026-11-20"
+    },
+    {
+      "slug": "final-fantasy-vii-remake-intergrade",
+      "date": "2026-11-20"
     }
   ],
   "free_dates": [
