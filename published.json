@@ -1,46 +1,6 @@
 {
   "published": [
     {
-      "slug": "dead-by-daylight",
-      "date": "2026-10-21"
-    },
-    {
-      "slug": "haven",
-      "date": "2026-10-21"
-    },
-    {
-      "slug": "soma",
-      "date": "2026-10-21"
-    },
-    {
-      "slug": "furi",
-      "date": "2026-10-21"
-    },
-    {
-      "slug": "fabledom",
-      "date": "2026-10-21"
-    },
-    {
-      "slug": "resident-evil-4-2023",
-      "date": "2026-10-23"
-    },
-    {
-      "slug": "resident-evil-village",
-      "date": "2026-10-23"
-    },
-    {
-      "slug": "resident-evil-2-2019",
-      "date": "2026-10-23"
-    },
-    {
-      "slug": "resident-evil-3-2020",
-      "date": "2026-10-23"
-    },
-    {
-      "slug": "resident-evil-7-biohazard",
-      "date": "2026-10-23"
-    },
-    {
       "slug": "sker-ritual",
       "date": "2026-10-26"
     },
@@ -279,6 +239,26 @@
     {
       "slug": "final-fantasy-vii-remake-intergrade",
       "date": "2026-11-20"
+    },
+    {
+      "slug": "red-dead-redemption-2",
+      "date": "2026-11-23"
+    },
+    {
+      "slug": "detroit-become-human",
+      "date": "2026-11-23"
+    },
+    {
+      "slug": "hell-is-us",
+      "date": "2026-11-23"
+    },
+    {
+      "slug": "risk-of-rain-2",
+      "date": "2026-11-23"
+    },
+    {
+      "slug": "hogwarts-legacy",
+      "date": "2026-11-23"
     }
   ],
   "free_dates": [
