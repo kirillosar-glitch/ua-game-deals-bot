@@ -1,26 +1,6 @@
 {
   "published": [
     {
-      "slug": "sker-ritual",
-      "date": "2026-10-26"
-    },
-    {
-      "slug": "dredge",
-      "date": "2026-10-26"
-    },
-    {
-      "slug": "little-nightmares-ii",
-      "date": "2026-10-26"
-    },
-    {
-      "slug": "ni-no-kuni-ii-revenant-kingdom",
-      "date": "2026-10-26"
-    },
-    {
-      "slug": "shadow-of-the-tomb-raider-definitive-edition",
-      "date": "2026-10-26"
-    },
-    {
       "slug": "home-a-unique-horror-adventure",
       "date": "2026-10-28"
     },
@@ -279,6 +259,26 @@
     {
       "slug": "doom-eternal",
       "date": "2026-11-25"
+    },
+    {
+      "slug": "cyberpunk-2077",
+      "date": "2026-11-27"
+    },
+    {
+      "slug": "atomic-heart",
+      "date": "2026-11-27"
+    },
+    {
+      "slug": "terra-nil",
+      "date": "2026-11-27"
+    },
+    {
+      "slug": "ixion",
+      "date": "2026-11-27"
+    },
+    {
+      "slug": "enter-the-gungeon",
+      "date": "2026-11-27"
     }
   ],
   "free_dates": [
